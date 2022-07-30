@@ -1,0 +1,22 @@
+{
+  "latestReport": [
+    {
+      "name": "Tramore",
+      "readings": {
+        "code": 700,
+        "temperature": 8,
+        "windSpeed": 1,
+        "pressure": 1005
+      }
+    },
+    {
+      "name": "Dunmore",
+      "readings": {
+        "code": 200,
+        "temperature": 0.5,
+        "windSpeed": 3.5,
+        "pressure": 1000
+      }
+    }
+  ]
+}
