@@ -1,36 +1,54 @@
 <div class="ui five column grid">
+
   <div class="column">
     <div class="ui card" style="height: 100%">
       <div class="content">
+
         <h3 class="ui header">
           <i class="green map marker icon"></i>
-          <div class="content">{{name}}</div><hr>
+          <div class="content">{{station.name}}</div>
         </h3>
+        <div class="ui divider"></div>
+
         <div class="description"></div>
         <div class="description"></div>
       </div>
     </div>
   </div>
+
   <div class="column">
     <div class="ui card" style="height: 100%">
       <div class="content">
+
         <h3 class="ui header">
           <i class="yellow sun icon"></i>
-          <div class="content">Weather</div><hr>
+          <div class="content">Weather</div>
         </h3>
-        <div class="description"><b>{{getWeatherLabel}}</b></div>
+        <div class="ui divider"></div>
+
+        <div class="description"><b>{{getWeatherLabel station.name}}</b></div>
       </div>
     </div>
   </div>
+
   <div class="column">
     <div class="ui card" style="height: 100%">
       <div class="content">
+
         <h3 class="ui header">
           <i class="red thermometer icon"></i>
-          <div class="content">Temperature</div><hr>
+          <div class="content">Temperature</div>
         </h3>
-        <div class="description"><b>Currently: {{getLatestTemperature name}}</b></div>
-        <hr>
+        <div class="ui divider"></div>
+        <div class="description">
+          Currently:
+          <b>
+            {{getTempCelsius station.name}} C
+            ({{getTempFahrenheit station.name}} F)
+          </b>
+        </div>
+        <div class="ui divider"></div>
+
         <div class="description"></div>
         <div class="description"></div>
         <div class="description">
@@ -39,22 +57,28 @@
       </div>
     </div>
   </div>
+
   <div class="column">
     <div class="ui card" style="height: 100%">
       <div class="content">
+
         <h3 class="ui header">
           <i class="blue paper plane icon"></i>
-          <div class="content">Wind</div><hr>
+          <div class="content">Wind</div>
         </h3>
+        <div class="ui divider"></div>
+
         <div class="ui two column grid">
           <div class="column">
             <div class="description">Currently</div>
           </div>
+
           <div class="column">
-            <b>{{getBeaufortReading name}} bft</b>
+            <b>{{getBeaufortReading station.name}} bft</b>
           </div>
         </div>
-        <hr>
+        <div class="ui divider"></div>
+
         <div class="ui two column grid">
           <div class="column">
             <div class="description">Direction</div>
@@ -62,32 +86,42 @@
             <div class="description">Wind Chill</div>
             <div class="description"></div>
           </div>
+
           <div class="column">
             <b>
-              <div class="description">{{getCompassDirection name}}</div>
-              <div class="description">{{getBeaufortLabel name}}</div>
-              <div class="description">{{getWindChill name}} C</div>
+              <div class="description">{{getCompassDirection station.name}}</div>
+              <div class="description">{{getBeaufortLabel station.name}}</div>
+              <div class="description">{{getWindChill station.name}} C</div>
             </b>
           </div>
-        </div>
-        <div class="description">
-          <b></b>
         </div>
       </div>
     </div>
   </div>
+
   <div class="column">
     <div class="ui card" style="height: 100%">
       <div class="content">
+
         <h3 class="ui header">
           <i class="orange expand arrows alternate icon"></i>
-          <div class="content">Pressure</div><hr>
+          <div class="content">Pressure</div>
         </h3>
-        <div class="description"><b>Currently: {{getLatestPressure name}} hpa</b></div>
-        <hr>
-        <div class="description"></div>
-        <div class="description"></div>
+        <div class="ui divider"></div>
 
+        <div class="ui two column grid">
+          <div class="column">
+            <div class="content">Currently</div>
+          </div>
+
+          <div class="column">
+            <b>{{getLatestPressure station.name}} hpa</b>
+          </div>
+        </div>
+        <div class="ui divider"></div>
+
+        <div class="description"></div>
+        <div class="description"></div>
         <div class="description">
           <b></b>
         </div>

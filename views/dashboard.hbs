@@ -1,11 +1,5 @@
 {{> menu id="dashboard"}}
 
-{{#each stations}}
-  <section class="ui segment">
-    {{> cards}}
-    {{> list-readings}}
-  </section>
-  <div class="ui hidden divider"></div>
-{{/each}}
-
-<div class="ui hidden divider"></div>
+<section class="ui segment">
+  {{> list-stations}}
+</section>

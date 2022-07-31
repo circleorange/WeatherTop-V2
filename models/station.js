@@ -59,42 +59,48 @@ const station = {
     return this.reportStore.findAll(this.report);
   },
 
-  getLatestReadingsByStation(name) {
+  getLatestStationReport(name) {
     return this.reportStore.findOneBy(this.report, {name: name});
   }
 };
 
-Handlebars.registerHelper("getWeatherLabel", function() {
-  return conversions.getWeatherLabel(this.readings[this.readings.length - 1]["code"]);
+Handlebars.registerHelper("getWeatherLabel", function(name) {
+  let report = station.getLatestStationReport(name);
+  return conversions.getWeatherLabel(report["readings"]["code"]);
 })
 
-Handlebars.registerHelper("getLatestTemperature", function(name) {
-  let report = station.getLatestReadingsByStation(name);
-  return report["readings"]["tempCelsius"] + "C" + " / " + report["readings"]["tempFahrenheit"] + "F";
+Handlebars.registerHelper("getTempCelsius", function(name) {
+  let report = station.getLatestStationReport(name);
+  return report["readings"]["tempCelsius"];
+})
+
+Handlebars.registerHelper("getTempFahrenheit", function(name) {
+  let report = station.getLatestStationReport(name);
+  return report["readings"]["tempFahrenheit"];
 })
 
 Handlebars.registerHelper("getBeaufortReading", function(name) {
-  let report = station.getLatestReadingsByStation(name);
+  let report = station.getLatestStationReport(name);
   return report["readings"]["beaufortReading"];
 })
 
 Handlebars.registerHelper("getLatestPressure", function(name) {
-  let report = station.getLatestReadingsByStation(name);
+  let report = station.getLatestStationReport(name);
   return report["readings"]["pressure"];
 })
 
 Handlebars.registerHelper("getCompassDirection", function(name) {
-  let report = station.getLatestReadingsByStation(name);
+  let report = station.getLatestStationReport(name);
   return report["readings"]["compassDirection"];
 })
 
 Handlebars.registerHelper("getBeaufortLabel", function(name) {
-  let report = station.getLatestReadingsByStation(name);
+  let report = station.getLatestStationReport(name);
   return conversions.getBeaufortLabel(report["readings"]["beaufortReading"]);
 })
 
 Handlebars.registerHelper("getWindChill", function(name) {
-  let report = station.getLatestReadingsByStation(name);
+  let report = station.getLatestStationReport(name);
   return Math.round((report["readings"]["windChill"]) * 100) / 100;
 })
 

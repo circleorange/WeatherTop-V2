@@ -1,0 +1,23 @@
+{{#each stations}}
+  <section class="ui raised segment">
+    <h2 class="ui header">{{name}}</h2>
+
+    <div class="ui grid">
+
+      <div class="two column row">
+        <div class="column">
+          <a href="/station/{{id}}" class="ui icon button">
+            <i class="folder open icon"></i> Open readings
+          </a>
+        </div>
+
+        <div class="right aligned column">
+          <a href="/dashboard/delete-station/{{id}}" class="ui red icon button">
+            <i class="trash icon"></i> Delete station
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+{{/each}}
