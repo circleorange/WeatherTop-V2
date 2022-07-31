@@ -24,35 +24,46 @@ const station = {
     return this.model.findOneBy(this.collection, {id: id});
   },
 
-  createLatestReport() {
+  createStation(stationName) {
+    this.model.add(this.collection, stationName);
+    this.model.save();
+  },
+
+  deleteStation(stationId) {
+    const station = this.getStationById(stationId);
+    this.model.remove(this.collection, station);
+    this.model.save();
+  },
+
+  createLatestReport(stations) {
     this.reportStore.removeAll(this.report);
-    const stations = this.model.findAll(this.collection);
-    let latestReadingOf = null;
 
     for (let i = 0; i < stations.length; i++) {
       let station = stations[i];
-      latestReadingOf = station["readings"][station["readings"].length - 1];
+      let latestReadingOf = station["readings"][station["readings"].length - 1];
+      let isEmpty = station["readings"].length === 0;
 
-      const latestReport = {
+      const latestReadings = {
         name: station["name"],
         readings: {
-          code: latestReadingOf["code"],
-          tempCelsius: latestReadingOf["temperature"],
-          tempFahrenheit: conversions.getFahrenheit(latestReadingOf["temperature"]),
-          pressure: latestReadingOf["pressure"],
+          code: isEmpty ? "" : latestReadingOf["code"],
+          tempCelsius: isEmpty ? "" : latestReadingOf["temperature"],
+          tempFahrenheit: isEmpty ? "" : conversions.getFahrenheit(latestReadingOf["temperature"]),
+          pressure: isEmpty ? "" : latestReadingOf["pressure"],
 
-          windSpeed: latestReadingOf["windSpeed"],
-          windDirection: latestReadingOf["windDirection"],
-          windChill: conversions.getWindChill(latestReadingOf["temperature"], latestReadingOf["windSpeed"]),
-          compassDirection: conversions.getCompassDirection(latestReadingOf["windDirection"]),
+          windSpeed: isEmpty ? "" : latestReadingOf["windSpeed"],
+          windDirection: isEmpty ? "" : latestReadingOf["windDirection"],
 
-          beaufortReading: conversions.getBeaufortReading(latestReadingOf["windSpeed"]),
+          windChill: isEmpty ? "" : conversions.getWindChill(latestReadingOf["temperature"], latestReadingOf["windSpeed"]),
+          compassDirection: isEmpty ? "" : conversions.getCompassDirection(latestReadingOf["windDirection"]),
+          beaufortReading: isEmpty ? "" : conversions.getBeaufortReading(latestReadingOf["windSpeed"]),
         }
       };
 
-      this.reportStore.add(this.report, latestReport);
+      this.reportStore.add(this.report, latestReadings);
       this.reportStore.save();
     }
+    return this.getAllLatestReadings();
   },
 
   getAllLatestReadings() {
@@ -61,12 +72,13 @@ const station = {
 
   getLatestStationReport(name) {
     return this.reportStore.findOneBy(this.report, {name: name});
-  }
+  },
+
 };
 
 Handlebars.registerHelper("getWeatherLabel", function(name) {
-  let report = station.getLatestStationReport(name);
-  return conversions.getWeatherLabel(report["readings"]["code"]);
+  let stationReport = station.getLatestStationReport(name);
+  return conversions.getWeatherLabel(stationReport["readings"]["code"]);
 })
 
 Handlebars.registerHelper("getTempCelsius", function(name) {

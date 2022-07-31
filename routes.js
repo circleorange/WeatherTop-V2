@@ -12,5 +12,7 @@ router.get("/dashboard", dashboard.index);
 router.get("/about", about.index);
 
 router.get("/station/:id", stationControl.index);
+router.post("/dashboard/add-station", dashboard.createStation);
+router.get("/dashboard/delete-station/:id", dashboard.deleteStation);
 
 module.exports = router;
