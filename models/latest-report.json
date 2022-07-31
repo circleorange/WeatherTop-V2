@@ -4,18 +4,28 @@
       "name": "Tramore",
       "readings": {
         "code": 700,
-        "temperature": 8,
+        "tempCelsius": 8,
+        "tempFahrenheit": 46.4,
+        "pressure": 1005,
         "windSpeed": 1,
-        "pressure": 1005
+        "windDirection": 101,
+        "windChill": 9.894,
+        "compassDirection": "East",
+        "beaufortReading": 1
       }
     },
     {
       "name": "Dunmore",
       "readings": {
         "code": 200,
-        "temperature": 0.5,
+        "tempCelsius": 0.5,
+        "tempFahrenheit": 32.9,
+        "pressure": 1000,
         "windSpeed": 3.5,
-        "pressure": 1000
+        "windDirection": 102,
+        "windChill": -0.22048980101855173,
+        "compassDirection": "ESE",
+        "beaufortReading": 1
       }
     }
   ]

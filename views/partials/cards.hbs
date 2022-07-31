@@ -18,8 +18,7 @@
           <i class="yellow sun icon"></i>
           <div class="content">Weather</div><hr>
         </h3>
-        <div class="description"><b>{{latestCode}}</b></div>
-
+        <div class="description"><b>{{getWeatherLabel}}</b></div>
       </div>
     </div>
   </div>
@@ -30,11 +29,10 @@
           <i class="red thermometer icon"></i>
           <div class="content">Temperature</div><hr>
         </h3>
-        <div class="description"><b>Currently:</b> {{latestTemperature}}</div>
-
+        <div class="description"><b>Currently: {{getLatestTemperature name}}</b></div>
+        <hr>
         <div class="description"></div>
         <div class="description"></div>
-
         <div class="description">
           <b></b>
         </div>
@@ -48,12 +46,30 @@
           <i class="blue paper plane icon"></i>
           <div class="content">Wind</div><hr>
         </h3>
-        <div class="description"><b>Currently:</b> {{latestBeaufortReading}} bft</div>
-        <div class="description"></div>
-        <div class="description"></div>
-        <div class="description"></div>
-        <div class="description"></div>
-
+        <div class="ui two column grid">
+          <div class="column">
+            <div class="description">Currently</div>
+          </div>
+          <div class="column">
+            <b>{{getBeaufortReading name}} bft</b>
+          </div>
+        </div>
+        <hr>
+        <div class="ui two column grid">
+          <div class="column">
+            <div class="description">Direction</div>
+            <div class="description">Feels like</div>
+            <div class="description">Wind Chill</div>
+            <div class="description"></div>
+          </div>
+          <div class="column">
+            <b>
+              <div class="description">{{getCompassDirection name}}</div>
+              <div class="description">{{getBeaufortLabel name}}</div>
+              <div class="description">{{getWindChill name}} C</div>
+            </b>
+          </div>
+        </div>
         <div class="description">
           <b></b>
         </div>
@@ -67,8 +83,8 @@
           <i class="orange expand arrows alternate icon"></i>
           <div class="content">Pressure</div><hr>
         </h3>
-        <div class="description"><b>Currently:</b> {{latestPressure}} hpa</div>
-
+        <div class="description"><b>Currently: {{getLatestPressure name}} hpa</b></div>
+        <hr>
         <div class="description"></div>
         <div class="description"></div>
 
