@@ -1,10 +1,12 @@
-<table class="ui table">
+<table class="ui center aligned celled table">
   <thead>
     <tr>
       <th>Code</th>
       <th>Temperature</th>
       <th>Wind Speed</th>
+      <th>Wind Direction</th>
       <th>Pressure</th>
+      <th>Action</th>
     </tr>
   </thead>
   <tbody>
@@ -13,7 +15,13 @@
         <td>{{code}}</td>
         <td>{{temperature}}</td>
         <td>{{windSpeed}}</td>
+        <td>{{windDirection}}</td>
         <td>{{pressure}}</td>
+        <td>
+          <a href="/station/{{../station.id}}/delete-reading/{{id}}" class="ui red icon button">
+            <i class="icon trash"></i> Delete
+          </a>
+        </td>
       </tr>
     {{/each}}
   </tbody>

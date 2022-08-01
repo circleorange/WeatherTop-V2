@@ -82,19 +82,17 @@
         <div class="ui two column grid">
           <div class="column">
             <div class="description">Direction</div>
-            <div class="description">Feels like</div>
             <div class="description">Wind Chill</div>
-            <div class="description"></div>
           </div>
 
           <div class="column">
             <b>
               <div class="description">{{getCompassDirection station.name}}</div>
-              <div class="description">{{getBeaufortLabel station.name}}</div>
               <div class="description">{{getWindChill station.name}} C</div>
             </b>
           </div>
         </div>
+        <div class="description">Feels like <b>{{getBeaufortLabel station.name}}</b></div>
       </div>
     </div>
   </div>

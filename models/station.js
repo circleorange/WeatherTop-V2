@@ -35,6 +35,19 @@ const station = {
     this.model.save();
   },
 
+  createReading(stationId, reading) {
+    const station = this.getStationById(stationId);
+    station.readings.push(reading);
+    this.model.save();
+  },
+
+  deleteReading(stationId, readingId) {
+    const station = this.getStationById(stationId);
+    const readings = station.readings;
+    _.remove(readings, {id: readingId});
+    this.model.save();
+  },
+
   createLatestReport(stations) {
     this.reportStore.removeAll(this.report);
 

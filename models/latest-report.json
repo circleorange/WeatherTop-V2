@@ -27,6 +27,20 @@
         "compassDirection": "ESE",
         "beaufortReading": 1
       }
+    },
+    {
+      "name": "Belgia",
+      "readings": {
+        "code": "",
+        "tempCelsius": "",
+        "tempFahrenheit": "",
+        "pressure": "",
+        "windSpeed": "",
+        "windDirection": "",
+        "windChill": "",
+        "compassDirection": "",
+        "beaufortReading": ""
+      }
     }
   ]
 }
