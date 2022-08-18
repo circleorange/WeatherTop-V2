@@ -3,7 +3,7 @@
 const low = require("lowdb");
 const FileSync = require("lowdb/adapters/FileSync");
 
-class Json {
+class JsonStore {
   constructor(file, defaults) {
     const adapter = new FileSync(file);
     this.db = low(adapter);
@@ -64,4 +64,4 @@ class Json {
   }
 }
 
-module.exports = Json;
+module.exports = JsonStore;

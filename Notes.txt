@@ -1,0 +1,12 @@
+- Move readings inside the stationStore view (done)
+- Add new reading fields: wind direction, chill, compass (done)
+- Implemented create/ delete functionality for stations and readings (done)
+==RELEASE 1== (complete)
+
+- Refactor file names
+
+- Add position coordinates to stationStore card
+- Implement computation of Min-Max values of readings
+- Create registration and log in pages
+- Implement Member functionality
+==RELEASE 2==

@@ -1,7 +1,8 @@
 "use strict";
 
 const logger = require("../utils/logger");
-const stationCollection = require("../models/station");
+const stationCollection = require("../models/station-store");
+const reportCollection = require("../models/latest-report");
 const uuid = require("uuid");
 
 const dashboard = {
@@ -11,7 +12,7 @@ const dashboard = {
     const viewData = {
       title: "Dashboard",
       stations: stations,
-      latestReadings: stationCollection.createLatestReport(stations)
+      latestReadings: reportCollection.createLatestReport(stations)
     };
     response.render("dashboard", viewData);
   },
@@ -21,9 +22,12 @@ const dashboard = {
     const newStation = {
       id: uuid.v1(),
       name: request.body.name,
+      position: {
+        latitude: request.body.latitude,
+        longitude: request.body.longitude,
+      },
       readings: [],
     };
-    logger.info("CREATING_STATION_OBJECT", newStation.name);
     stationCollection.createStation(newStation);
     response.redirect("/dashboard");
   },

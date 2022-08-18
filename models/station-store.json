@@ -1,0 +1,104 @@
+{
+  "stationCollection": [
+    {
+      "id": "01",
+      "name": "Tramore",
+      "position": {
+        "latitude": 52.1621,
+        "longitude": -7.152
+      },
+      "readings": [
+        {
+          "id": "02",
+          "code": 800,
+          "temperature": 0.5,
+          "windSpeed": 3.5,
+          "pressure": 1002,
+          "windDirection": 90
+        },
+        {
+          "id": "03",
+          "code": 600,
+          "temperature": 6,
+          "windSpeed": 2,
+          "pressure": 1004,
+          "windDirection": 96
+        },
+        {
+          "id": "04",
+          "code": 700,
+          "temperature": 8,
+          "windSpeed": 1,
+          "pressure": 1005,
+          "windDirection": 101
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "name": "Dunmore",
+      "position": {
+        "latitude": 52.1499,
+        "longitude": -6.9833
+      },
+      "readings": [
+        {
+          "id": "06",
+          "code": 700,
+          "temperature": 8,
+          "windSpeed": 1,
+          "pressure": 999,
+          "windDirection": 98
+        },
+        {
+          "id": "07",
+          "code": 200,
+          "temperature": 0.5,
+          "windSpeed": 3.5,
+          "pressure": 1000,
+          "windDirection": 102
+        },
+        {
+          "id": "13057d30-11d0-11ed-b404-53813556e1b0",
+          "code": "400",
+          "temperature": "20",
+          "windSpeed": "25",
+          "windDirection": "200",
+          "pressure": "999"
+        }
+      ]
+    },
+    {
+      "id": "2ed94a80-1f15-11ed-a2f9-9ba8a5d8f994",
+      "name": "test",
+      "readings": [
+        {
+          "id": "33d5d330-1f1c-11ed-b5eb-fbb2dc7462df",
+          "code": "200",
+          "temperature": "30",
+          "windSpeed": "50",
+          "windDirection": "50",
+          "pressure": "999"
+        }
+      ]
+    },
+    {
+      "id": "5d73d110-1f1c-11ed-b6f0-3389328140b2",
+      "name": "test2",
+      "position": {
+        "latitude": "50.124",
+        "longitude": "-1.245"
+      },
+      "readings": [
+        {
+          "id": "70483880-1f1c-11ed-b6f0-3389328140b2",
+          "code": "200",
+          "temperature": "50",
+          "windSpeed": "60",
+          "windDirection": "50",
+          "pressure": "999"
+        }
+      ]
+    }
+  ]
+}

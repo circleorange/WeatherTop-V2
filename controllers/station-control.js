@@ -1,16 +1,19 @@
 "use strict";
 
 const logger = require("../utils/logger");
-const stationCollection = require("../models/station");
+const stationCollection = require("../models/station-store");
+const reportCollection = require("../models/latest-report");
 const uuid = require("uuid");
 
 const stationControl = {
   index(request, response) {
     const stationId = request.params.id;
     logger.debug("OPEN_STATION_ID(" + stationId + ")");
+    const currStation = stationCollection.getStationById(stationId);
     const viewData = {
       title: "Station",
-      station: stationCollection.getStationById(stationId),
+      station: currStation,
+      latestReport: reportCollection.getOneReportByName(currStation["name"]),
     };
     response.render("station", viewData);
   },
@@ -28,7 +31,7 @@ const stationControl = {
     };
     stationCollection.createReading(stationId, newReading);
     let stations = stationCollection.getAllStations();
-    stationCollection.createLatestReport(stations);
+    reportCollection.createLatestReport(stations);
     response.redirect("/station/" + stationId);
   },
 
@@ -38,7 +41,7 @@ const stationControl = {
     const readingId = request.params.readingId;
     stationCollection.deleteReading(stationId, readingId);
     let stations = stationCollection.getAllStations();
-    stationCollection.createLatestReport(stations);
+    reportCollection.createLatestReport(stations);
     response.redirect("/station/" + stationId);
   }
 };

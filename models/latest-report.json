@@ -17,29 +17,43 @@
     {
       "name": "Dunmore",
       "readings": {
-        "code": 200,
-        "tempCelsius": 0.5,
-        "tempFahrenheit": 32.9,
-        "pressure": 1000,
-        "windSpeed": 3.5,
-        "windDirection": 102,
-        "windChill": -0.22048980101855173,
-        "compassDirection": "ESE",
-        "beaufortReading": 1
+        "code": "400",
+        "tempCelsius": "20",
+        "tempFahrenheit": 68,
+        "pressure": "999",
+        "windSpeed": "25",
+        "windDirection": "200",
+        "windChill": 19.7925676464765,
+        "compassDirection": "SSW",
+        "beaufortReading": 4
       }
     },
     {
-      "name": "Belgia",
+      "name": "test",
       "readings": {
-        "code": "",
-        "tempCelsius": "",
-        "tempFahrenheit": "",
-        "pressure": "",
-        "windSpeed": "",
-        "windDirection": "",
-        "windChill": "",
-        "compassDirection": "",
-        "beaufortReading": ""
+        "code": "200",
+        "tempCelsius": "30",
+        "tempFahrenheit": 86,
+        "pressure": "999",
+        "windSpeed": "50",
+        "windDirection": "50",
+        "windChill": 32.74673551929627,
+        "compassDirection": "NE",
+        "beaufortReading": 7
+      }
+    },
+    {
+      "name": "test2",
+      "readings": {
+        "code": "200",
+        "tempCelsius": "50",
+        "tempFahrenheit": 122,
+        "pressure": "999",
+        "windSpeed": "60",
+        "windDirection": "50",
+        "windChill": 60.47362849596607,
+        "compassDirection": "NE",
+        "beaufortReading": 7
       }
     }
   ]

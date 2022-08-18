@@ -2,7 +2,8 @@
 
 const conversions = {
   getWeatherLabel(code) {
-    if (code == 100) {return "Clear";}
+    if (code == "") {return "";}
+    else if (code == 100) {return "Clear";}
     else if (code == 200) {return "Partial Clouds";}
     else if (code == 300) {return "Cloudy";}
     else if (code == 400) {return "Light Showers";}

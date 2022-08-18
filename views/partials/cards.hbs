@@ -10,8 +10,18 @@
         </h3>
         <div class="ui divider"></div>
 
-        <div class="description"></div>
-        <div class="description"></div>
+        <div class="ui two column grid">
+          <div class="column">
+            <div class="description">Latitude</div>
+            <div class="description">Longitude</div>
+          </div>
+
+          <div class="column">
+            <div class="description">{{station.position.latitude}}</div>
+            <div class="description">{{station.position.longitude}}</div>
+          </div>
+        </div>
+
       </div>
     </div>
   </div>
@@ -26,7 +36,7 @@
         </h3>
         <div class="ui divider"></div>
 
-        <div class="description"><b>{{getWeatherLabel station.name}}</b></div>
+        <div><b>{{getWeatherLabel station.name}}</b></div>
       </div>
     </div>
   </div>
@@ -40,19 +50,32 @@
           <div class="content">Temperature</div>
         </h3>
         <div class="ui divider"></div>
-        <div class="description">
-          Currently:
-          <b>
-            {{getTempCelsius station.name}}C
-            ({{getTempFahrenheit station.name}}F)
-          </b>
+
+        <div class="ui two column grid">
+          <div class="column">
+            <div class="description">Currently</div>
+            <div class="description">Minimum</div>
+            <div class="description">Maximum</div>
+          </div>
+
+          <div class="column">
+            <b>{{getTempCelsius station.name}}</b>
+            <div class="description">Minimum</div>
+            <div class="description">Maximum</div>
+          </div>
         </div>
         <div class="ui divider"></div>
 
-        <div class="description"></div>
-        <div class="description"></div>
-        <div class="description">
-          <b></b>
+        <div class="ui two column grid">
+          <div class="column">
+            <div class="description">Fahrenheit</div>
+          </div>
+
+          <div class="column">
+            <b>
+              <div class="description">{{getTempFahrenheit station.name}}</div>
+            </b>
+          </div>
         </div>
       </div>
     </div>
@@ -71,13 +94,19 @@
         <div class="ui two column grid">
           <div class="column">
             <div class="description">Currently</div>
+            <div class="description">Minimum</div>
+            <div class="description">Maximum</div>
           </div>
 
           <div class="column">
-            <b>{{getBeaufortReading station.name}} bft</b>
+            <b>{{getBeaufortReading station.name}}</b>
+            <div class="description">Minimum</div>
+            <div class="description">Maximum</div>
           </div>
         </div>
         <div class="ui divider"></div>
+
+        <div><i>Feels like <b>{{getBeaufortLabel station.name}}</b></i></div>
 
         <div class="ui two column grid">
           <div class="column">
@@ -88,11 +117,11 @@
           <div class="column">
             <b>
               <div class="description">{{getCompassDirection station.name}}</div>
-              <div class="description">{{getWindChill station.name}} C</div>
+              <div class="description">{{getWindChill station.name}}</div>
             </b>
           </div>
         </div>
-        <div class="description">Feels like <b>{{getBeaufortLabel station.name}}</b></div>
+
       </div>
     </div>
   </div>
@@ -110,20 +139,30 @@
         <div class="ui two column grid">
           <div class="column">
             <div class="content">Currently</div>
+            <div class="description">Minimum</div>
+            <div class="description">Maximum</div>
           </div>
 
           <div class="column">
-            <b>{{getLatestPressure station.name}} hpa</b>
+            <b>{{getLatestPressure station.name}}</b>
+            <div class="description">Minimum</div>
+            <div class="description">Maximum</div>
           </div>
         </div>
         <div class="ui divider"></div>
 
-        <div class="description"></div>
-        <div class="description"></div>
-        <div class="description">
-          <b></b>
+        <div class="ui two column grid">
+          <div class="column">
+
+          </div>
+
+          <div class="column">
+
+          </div>
         </div>
+
       </div>
     </div>
   </div>
 </div>
+

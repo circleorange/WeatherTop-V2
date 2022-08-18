@@ -1,9 +1,12 @@
 {{> menu id="dashboard"}}
 
-<section class="ui segment">
-  {{> cards}}
-  {{> list-readings}}
-</section>
+{{#if latestReport.readings.code}}
+  <section class="ui segment">
+    {{> cards}}
+    {{> list-readings}}
+  </section>
+{{/if}}
+
 <div class="ui hidden divider"></div>
 {{> add-reading}}
 
