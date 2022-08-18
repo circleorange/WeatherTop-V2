@@ -5,7 +5,7 @@ const Json = require("./json-store");
 const conversions = require("../utils/conversions");
 
 const reportStore = {
-  reportStore: new Json("./models/latest-report.json", {
+  reportStore: new Json("./models/report-store.json", {
     latestReport: []
   }),
   report: "latestReport",

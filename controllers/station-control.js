@@ -2,7 +2,8 @@
 
 const logger = require("../utils/logger");
 const stationCollection = require("../models/station-store");
-const reportCollection = require("../models/latest-report");
+const reportCollection = require("../models/report-store");
+const stationAnalytics = require("../utils/station-analytics");
 const uuid = require("uuid");
 
 const stationControl = {
@@ -14,6 +15,14 @@ const stationControl = {
       title: "Station",
       station: currStation,
       latestReport: reportCollection.getOneReportByName(currStation["name"]),
+      stationSummary: {
+        maxTemperature: stationAnalytics.getMaxTemp(currStation),
+        minTemperature: stationAnalytics.getMinTemp(currStation),
+        maxWind: stationAnalytics.getMaxWindSpeed(currStation),
+        minWind: stationAnalytics.getMinWindSpeed(currStation),
+        maxPressure: stationAnalytics.getMaxPressure(currStation),
+        minPressure: stationAnalytics.getMinPressure(currStation)
+      }
     };
     response.render("station", viewData);
   },

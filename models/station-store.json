@@ -31,6 +31,22 @@
           "windSpeed": 1,
           "pressure": 1005,
           "windDirection": 101
+        },
+        {
+          "id": "eb2e2620-1f23-11ed-acbf-eb911ac0aeb5",
+          "code": "300",
+          "temperature": "20",
+          "windSpeed": "50",
+          "windDirection": "200",
+          "pressure": "999"
+        },
+        {
+          "id": "179ecc00-1f24-11ed-acbf-eb911ac0aeb5",
+          "code": "500",
+          "temperature": "10",
+          "windSpeed": "80",
+          "windDirection": "150",
+          "pressure": "980"
         }
       ]
     },
@@ -89,16 +105,7 @@
         "latitude": "50.124",
         "longitude": "-1.245"
       },
-      "readings": [
-        {
-          "id": "70483880-1f1c-11ed-b6f0-3389328140b2",
-          "code": "200",
-          "temperature": "50",
-          "windSpeed": "60",
-          "windDirection": "50",
-          "pressure": "999"
-        }
-      ]
+      "readings": []
     }
   ]
 }

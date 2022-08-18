@@ -4,7 +4,7 @@ const _ = require("lodash");
 const JsonStore = require("./json-store");
 const Handlebars = require("handlebars");
 const conversions = require("../utils/conversions");
-const reportCollection = require("../models/latest-report");
+const reportCollection = require("./report-store");
 
 const stationStore = {
   store: new JsonStore("./models/station-store.json", {
@@ -71,7 +71,7 @@ Handlebars.registerHelper("getBeaufortReading", function(name) {
 Handlebars.registerHelper("getLatestPressure", function(name) {
   let report = reportCollection.getOneReportByName(name);
   if (report["readings"]["pressure"] == null) {return "";}
-  else {return report["readings"]["pressure"] + " hpa";}
+  else {return report["readings"]["pressure"] + " hPa";}
 })
 
 Handlebars.registerHelper("getCompassDirection", function(name) {

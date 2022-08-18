@@ -60,8 +60,8 @@
 
           <div class="column">
             <b>{{getTempCelsius station.name}}</b>
-            <div class="description">Minimum</div>
-            <div class="description">Maximum</div>
+            <div class="description">{{stationSummary.minTemperature}} C</div>
+            <div class="description">{{stationSummary.maxTemperature}} C</div>
           </div>
         </div>
         <div class="ui divider"></div>
@@ -100,8 +100,8 @@
 
           <div class="column">
             <b>{{getBeaufortReading station.name}}</b>
-            <div class="description">Minimum</div>
-            <div class="description">Maximum</div>
+            <div class="description">{{stationSummary.minWind}} km/h</div>
+            <div class="description">{{stationSummary.maxWind}} km/h</div>
           </div>
         </div>
         <div class="ui divider"></div>
@@ -145,8 +145,8 @@
 
           <div class="column">
             <b>{{getLatestPressure station.name}}</b>
-            <div class="description">Minimum</div>
-            <div class="description">Maximum</div>
+            <div class="description">{{stationSummary.minPressure}} hPa</div>
+            <div class="description">{{stationSummary.maxPressure}} hPa</div>
           </div>
         </div>
         <div class="ui divider"></div>

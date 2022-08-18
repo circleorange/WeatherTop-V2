@@ -3,15 +3,15 @@
     {
       "name": "Tramore",
       "readings": {
-        "code": 700,
-        "tempCelsius": 8,
-        "tempFahrenheit": 46.4,
-        "pressure": 1005,
-        "windSpeed": 1,
-        "windDirection": 101,
-        "windChill": 9.894,
-        "compassDirection": "East",
-        "beaufortReading": 1
+        "code": "500",
+        "tempCelsius": "10",
+        "tempFahrenheit": 50,
+        "pressure": "980",
+        "windSpeed": "80",
+        "windDirection": "150",
+        "windChill": 4.406386966665712,
+        "compassDirection": "SSE",
+        "beaufortReading": 9
       }
     },
     {
@@ -45,15 +45,15 @@
     {
       "name": "test2",
       "readings": {
-        "code": "200",
-        "tempCelsius": "50",
-        "tempFahrenheit": 122,
-        "pressure": "999",
-        "windSpeed": "60",
-        "windDirection": "50",
-        "windChill": 60.47362849596607,
-        "compassDirection": "NE",
-        "beaufortReading": 7
+        "code": null,
+        "tempCelsius": null,
+        "tempFahrenheit": null,
+        "pressure": null,
+        "windSpeed": null,
+        "windDirection": null,
+        "windChill": null,
+        "compassDirection": null,
+        "beaufortReading": null
       }
     }
   ]
