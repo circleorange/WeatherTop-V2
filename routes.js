@@ -3,9 +3,17 @@
 const express = require("express");
 const router = express.Router();
 
+const accounts = require("./controllers/accounts.js");
 const dashboard = require("./controllers/dashboard.js");
 const about = require("./controllers/about.js");
 const stationControl = require("./controllers/station-control");
+
+router.get("/", accounts.index);
+router.get("/sign-in", accounts.signIn);
+router.get("/sign-up", accounts.signUp);
+router.get("/sign-out", accounts.signOut);
+router.post("/register", accounts.register);
+router.post("/authenticate", accounts.authenticate);
 
 router.get("/", dashboard.index);
 router.get("/dashboard", dashboard.index);
