@@ -13,8 +13,8 @@ const reportStore = {
   createLatestReport(stations) {
     this.reportStore.removeAll(this.report);
 
-    for (let i = 0; i < stations.length; i++) {
-      let station = stations[i];
+    // 'for in' loops over numbers but 'for of' loops over objects
+    for (let station of stations) {
       let latestReadingOf = station["readings"][station["readings"].length - 1];
       let isEmpty = station["readings"].length === 0;
 

@@ -3,15 +3,15 @@
     {
       "name": "Tramore",
       "readings": {
-        "code": "500",
-        "tempCelsius": "10",
-        "tempFahrenheit": 50,
-        "pressure": "980",
-        "windSpeed": "80",
-        "windDirection": "150",
-        "windChill": 4.406386966665712,
-        "compassDirection": "SSE",
-        "beaufortReading": 9
+        "code": "300",
+        "tempCelsius": "20",
+        "tempFahrenheit": 68,
+        "pressure": "999",
+        "windSpeed": "50",
+        "windDirection": "200",
+        "windChill": 19.11729488308732,
+        "compassDirection": "SSW",
+        "beaufortReading": 7
       }
     },
     {

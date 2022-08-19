@@ -39,14 +39,6 @@
           "windSpeed": "50",
           "windDirection": "200",
           "pressure": "999"
-        },
-        {
-          "id": "179ecc00-1f24-11ed-acbf-eb911ac0aeb5",
-          "code": "500",
-          "temperature": "10",
-          "windSpeed": "80",
-          "windDirection": "150",
-          "pressure": "980"
         }
       ]
     },
