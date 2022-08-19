@@ -2,6 +2,7 @@
   "stationCollection": [
     {
       "id": "01",
+      "userId": "3ad52697-6d98-4d80-8273-084de55a86c0",
       "name": "Tramore",
       "position": {
         "latitude": 52.1621,
@@ -45,6 +46,7 @@
     {
       "id": "05",
       "name": "Dunmore",
+      "userId": "3ad52697-6d98-4d80-8273-084de55a86c0",
       "position": {
         "latitude": 52.1499,
         "longitude": -6.9833
@@ -77,25 +79,12 @@
       ]
     },
     {
-      "id": "2ed94a80-1f15-11ed-a2f9-9ba8a5d8f994",
+      "id": "dbab9d30-1ff1-11ed-b2b5-e12e06a1d5fa",
+      "userId": "3ad52697-6d98-4d80-8273-084de55a86c0",
       "name": "test",
-      "readings": [
-        {
-          "id": "33d5d330-1f1c-11ed-b5eb-fbb2dc7462df",
-          "code": "200",
-          "temperature": "30",
-          "windSpeed": "50",
-          "windDirection": "50",
-          "pressure": "999"
-        }
-      ]
-    },
-    {
-      "id": "5d73d110-1f1c-11ed-b6f0-3389328140b2",
-      "name": "test2",
       "position": {
-        "latitude": "50.124",
-        "longitude": "-1.245"
+        "latitude": "30",
+        "longitude": "50"
       },
       "readings": []
     }

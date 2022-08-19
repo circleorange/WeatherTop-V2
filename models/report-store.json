@@ -31,20 +31,6 @@
     {
       "name": "test",
       "readings": {
-        "code": "200",
-        "tempCelsius": "30",
-        "tempFahrenheit": 86,
-        "pressure": "999",
-        "windSpeed": "50",
-        "windDirection": "50",
-        "windChill": 32.74673551929627,
-        "compassDirection": "NE",
-        "beaufortReading": 7
-      }
-    },
-    {
-      "name": "test2",
-      "readings": {
         "code": null,
         "tempCelsius": null,
         "tempFahrenheit": null,

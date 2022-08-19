@@ -6,7 +6,7 @@
 (Y) Refactor file names
 
 (Y) Add position coordinates to station
-(-) Implement computation of Min-Max values of readings
-(-) Create registration and log in pages
+(Y) Implement computation of Min-Max values of readings
+(Y) Create registration and log in pages
 (-) Implement Member functionality
 ==RELEASE 2==
