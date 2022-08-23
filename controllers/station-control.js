@@ -14,15 +14,6 @@ const stationControl = {
     const viewData = {
       title: "Station",
       station: currStation,
-      latestReport: reportCollection.getOneReportByName(currStation["name"]),
-      stationSummary: {
-        maxTemperature: stationAnalytics.getMaxTemp(currStation),
-        minTemperature: stationAnalytics.getMinTemp(currStation),
-        maxWind: stationAnalytics.getMaxWindSpeed(currStation),
-        minWind: stationAnalytics.getMinWindSpeed(currStation),
-        maxPressure: stationAnalytics.getMaxPressure(currStation),
-        minPressure: stationAnalytics.getMinPressure(currStation)
-      }
     };
     response.render("station", viewData);
   },

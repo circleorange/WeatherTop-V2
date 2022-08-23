@@ -14,7 +14,8 @@ const dashboard = {
     const viewData = {
       title: "Dashboard",
       stations: userStations,
-      latestReadings: reportStore.createLatestReport(userStations)
+      latestReadings: reportStore.createLatestReport(userStations),
+      stationSummary: stationStore.createStationSummary(userStations)
     };
     response.render("dashboard", viewData);
   },

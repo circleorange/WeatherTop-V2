@@ -5,6 +5,7 @@ const JsonStore = require("./json-store");
 const Handlebars = require("handlebars");
 const conversions = require("../utils/conversions");
 const reportCollection = require("./report-store");
+const stationAnalytics = require("../utils/station-analytics");
 
 const stationStore = {
   store: new JsonStore("./models/station-store.json", {
@@ -47,6 +48,36 @@ const stationStore = {
     _.remove(readings, {id: readingId});
     this.store.save();
   },
+
+  createStationSummary(stations) {
+    for (let station of stations) {
+      let minMaxValues = {
+        maxTemperature: stationAnalytics.getMaxTemp(station),
+        minTemperature: stationAnalytics.getMinTemp(station),
+        maxWind: stationAnalytics.getMaxWindSpeed(station),
+        minWind: stationAnalytics.getMinWindSpeed(station),
+        maxPressure: stationAnalytics.getMaxPressure(station),
+        minPressure: stationAnalytics.getMinPressure(station)
+      }
+
+      let weatherTrends = {
+        temperatureTrend: stationAnalytics.getTemperatureTrend(station),
+        windTrend: stationAnalytics.getWindTrend(station),
+        pressureTrend: stationAnalytics.getPressureTrend(station)
+      }
+
+      station["minMaxValues"] = minMaxValues;
+      station["weatherTrends"] = weatherTrends;
+
+      // Boolean check if station contains readings based on code field
+      if (station["readings"].length === 0) {
+        station["containsReadings"] = false;
+      } else {
+        station["containsReadings"] = true;
+      }
+    }
+    return stations;
+  }
 };
 
 Handlebars.registerHelper("getWeatherLabel", function(name) {

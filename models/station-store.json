@@ -32,16 +32,17 @@
           "windSpeed": 1,
           "pressure": 1005,
           "windDirection": 101
-        },
-        {
-          "id": "eb2e2620-1f23-11ed-acbf-eb911ac0aeb5",
-          "code": "300",
-          "temperature": "20",
-          "windSpeed": "50",
-          "windDirection": "200",
-          "pressure": "999"
         }
-      ]
+      ],
+      "minMaxValues": {
+        "maxTemperature": 8,
+        "minTemperature": 0.5,
+        "maxWind": 3.5,
+        "minWind": 1,
+        "maxPressure": 1005,
+        "minPressure": 1002
+      },
+      "containsReadings": true
     },
     {
       "id": "05",
@@ -76,7 +77,16 @@
           "windDirection": "200",
           "pressure": "999"
         }
-      ]
+      ],
+      "minMaxValues": {
+        "maxTemperature": "20",
+        "minTemperature": 0.5,
+        "maxWind": "25",
+        "minWind": 1,
+        "maxPressure": 1000,
+        "minPressure": 999
+      },
+      "containsReadings": true
     },
     {
       "id": "dbab9d30-1ff1-11ed-b2b5-e12e06a1d5fa",
@@ -86,7 +96,16 @@
         "latitude": "30",
         "longitude": "50"
       },
-      "readings": []
+      "readings": [],
+      "minMaxValues": {
+        "maxTemperature": "35",
+        "minTemperature": "35",
+        "maxWind": "70",
+        "minWind": "70",
+        "maxPressure": "980",
+        "minPressure": "980"
+      },
+      "containsReadings": true
     }
   ]
 }

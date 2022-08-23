@@ -78,6 +78,64 @@ const stationAnalytics = {
     }
     return minPressure;
   },
+
+  getTemperatureTrend(station) {
+    if (station.readings.length < 3) {
+      return "None";
+    }
+    else {
+      let trendCounter = 0;
+      for (let i = 1; i < 3; i++) {
+        let temp = station.readings[station.readings.length - i].temperature;
+        let tempPrev = station.readings[station.readings.length - 1 - i].temperature;
+
+        if (temp > tempPrev) { trendCounter++; }
+        if (temp < tempPrev) { trendCounter--; }
+      }
+      if (trendCounter == 2) { return "Increasing"; }
+      else if (trendCounter == -2) { return  "Decreasing"; }
+      else { return "None"; }
+    }
+  },
+
+  getWindTrend(station) {
+    if (station.readings.length < 3) {
+      return "None";
+    }
+    else {
+      let trendCounter = 0;
+      for (let i = 1; i < 3; i++) {
+        let wind = station.readings[station.readings.length - i].windSpeed;
+        let windPrev = station.readings[station.readings.length - 1 - i].windSpeed;
+
+        if (wind > windPrev) { trendCounter++; }
+        if (wind < windPrev) { trendCounter--; }
+      }
+      if (trendCounter == 2) { return "Increasing"; }
+      else if (trendCounter == -2) { return  "Decreasing"; }
+      else { return "None"; }
+    }
+  },
+
+  getPressureTrend(station) {
+    if (station.readings.length < 3) {
+      return "None";
+    }
+    else {
+      let trendCounter = 0;
+      for (let i = 1; i < 3; i++) {
+        let pressure = station.readings[station.readings.length - i].pressure;
+        let pressurePrev = station.readings[station.readings.length - 1 - i].pressure;
+
+        if (pressure > pressurePrev) { trendCounter++; }
+        if (pressure < pressurePrev) { trendCounter--; }
+      }
+      if (trendCounter == 2) { return "Increasing"; }
+      else if (trendCounter == -2) { return  "Decreasing"; }
+      else { return "None"; }
+    }
+  }
+
 };
 
 module.exports = stationAnalytics;

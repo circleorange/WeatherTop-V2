@@ -8,5 +8,15 @@
 (Y) Add position coordinates to station
 (Y) Implement computation of Min-Max values of readings
 (Y) Create registration and log in pages
-(-) Implement Member functionality
+(Y) Implement Member functionality
 ==RELEASE 2==
+
+(-) Add new reading field: timestamp
+(-) Implement weather trends
+(-) Implement functionality to update member details
+(Y) Move latest reading cards to the dashboard
+==RELEASE 3==
+
+(-) Require users fill out all reading fields to submit successfully
+(-) Add text colours to trend for "Increasing" and "Decreasing"
+==PATCH 1==

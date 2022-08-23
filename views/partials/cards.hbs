@@ -1,12 +1,11 @@
 <div class="ui five column grid">
-
   <div class="column">
     <div class="ui card" style="height: 100%">
       <div class="content">
 
         <h3 class="ui header">
           <i class="green map marker icon"></i>
-          <div class="content">{{station.name}}</div>
+          <div class="content">{{name}}</div>
         </h3>
         <div class="ui divider"></div>
 
@@ -17,8 +16,8 @@
           </div>
 
           <div class="column">
-            <div class="description">{{station.position.latitude}}</div>
-            <div class="description">{{station.position.longitude}}</div>
+            <div class="description">{{position.latitude}}</div>
+            <div class="description">{{position.longitude}}</div>
           </div>
         </div>
 
@@ -36,7 +35,14 @@
         </h3>
         <div class="ui divider"></div>
 
-        <div><b>{{getWeatherLabel station.name}}</b></div>
+        <div class="center aligned">
+          <div class="ui hidden divider"></div>
+          What to expect?
+          <div><b>{{getWeatherLabel name}}</b></div>
+          <div class="ui hidden divider"></div>
+          Wind feels like
+          <div><i><b>{{getBeaufortLabel name}}</b></i></div>
+        </div>
       </div>
     </div>
   </div>
@@ -54,29 +60,31 @@
         <div class="ui two column grid">
           <div class="column">
             <div class="description">Currently</div>
-            <div class="description">Minimum</div>
-            <div class="description">Maximum</div>
+            <div class="description">Min - Max</div>
+            <div class="description">Fahrenheit</div>
           </div>
 
           <div class="column">
-            <b>{{getTempCelsius station.name}}</b>
-            <div class="description">{{stationSummary.minTemperature}} C</div>
-            <div class="description">{{stationSummary.maxTemperature}} C</div>
+            <b>{{getTempCelsius name}}</b>
+            <div class="description">{{minMaxValues.minTemperature}} - {{minMaxValues.maxTemperature}} C</div>
+            <div class="description">{{getTempFahrenheit name}}</div>
           </div>
         </div>
         <div class="ui divider"></div>
 
         <div class="ui two column grid">
           <div class="column">
-            <div class="description">Fahrenheit</div>
+            <div class="description">Wind Chill</div>
           </div>
 
           <div class="column">
             <b>
-              <div class="description">{{getTempFahrenheit station.name}}</div>
+              <div class="description">{{getWindChill name}}</div>
             </b>
           </div>
         </div>
+        <div class="ui divider"></div>
+        <div>Trend: <b>{{weatherTrends.temperatureTrend}}</b></div>
       </div>
     </div>
   </div>
@@ -99,29 +107,26 @@
           </div>
 
           <div class="column">
-            <b>{{getBeaufortReading station.name}}</b>
-            <div class="description">{{stationSummary.minWind}} km/h</div>
-            <div class="description">{{stationSummary.maxWind}} km/h</div>
+            <b>{{getBeaufortReading name}}</b>
+            <div class="description">{{minMaxValues.minWind}} km/h</div>
+            <div class="description">{{minMaxValues.maxWind}} km/h</div>
           </div>
         </div>
         <div class="ui divider"></div>
 
-        <div><i>Feels like <b>{{getBeaufortLabel station.name}}</b></i></div>
-
         <div class="ui two column grid">
           <div class="column">
             <div class="description">Direction</div>
-            <div class="description">Wind Chill</div>
           </div>
 
           <div class="column">
             <b>
-              <div class="description">{{getCompassDirection station.name}}</div>
-              <div class="description">{{getWindChill station.name}}</div>
+              <div class="description">{{getCompassDirection name}}</div>
             </b>
           </div>
         </div>
-
+        <div class="ui divider"></div>
+        <div>Trend: <b>{{weatherTrends.windTrend}}</b></div>
       </div>
     </div>
   </div>
@@ -144,23 +149,16 @@
           </div>
 
           <div class="column">
-            <b>{{getLatestPressure station.name}}</b>
-            <div class="description">{{stationSummary.minPressure}} hPa</div>
-            <div class="description">{{stationSummary.maxPressure}} hPa</div>
+            <b>{{getLatestPressure name}}</b>
+            <div class="description">{{minMaxValues.minPressure}} hPa</div>
+            <div class="description">{{minMaxValues.maxPressure}} hPa</div>
           </div>
         </div>
         <div class="ui divider"></div>
-
-        <div class="ui two column grid">
-          <div class="column">
-
-          </div>
-
-          <div class="column">
-
-          </div>
-        </div>
-
+        <div class="ui hidden divider"></div>
+        <div class="ui hidden divider"></div>
+        <div class="ui divider"></div>
+        <div>Trend: <b>{{weatherTrends.pressureTrend}}</b></div>
       </div>
     </div>
   </div>

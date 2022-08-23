@@ -1,13 +1,20 @@
 {{> menu id="dashboard"}}
 
-{{#if latestReport.readings.code}}
-  <section class="ui segment">
-    {{> cards}}
-    {{> list-readings}}
-  </section>
-{{/if}}
-
-<div class="ui hidden divider"></div>
-{{> add-reading}}
+<section class="ui segment">
+  <div class="ui grid">
+    <div class="two column row">
+      <div class="left floated column">
+        <h2 class="ui header">{{station.name}} Station</h2>
+      </div>
+      <div class="right floated right aligned column">
+        <a href="/dashboard" class="ui button">
+          <i class="chevron left icon"></i>Back to Dashboard
+        </a>
+      </div>
+    </div>
+  </div>
+  {{> list-readings}}
+  {{> add-reading}}
+</section>
 
 <div class="ui hidden divider"></div>
