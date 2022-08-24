@@ -11,6 +11,7 @@
       "readings": [
         {
           "id": "02",
+          "date": "2021-04-25T07:20:42.138Z",
           "code": 800,
           "temperature": 0.5,
           "windSpeed": 3.5,
@@ -19,6 +20,7 @@
         },
         {
           "id": "03",
+          "date": "2021-05-25T07:20:42.138Z",
           "code": 600,
           "temperature": 6,
           "windSpeed": 2,
@@ -27,11 +29,21 @@
         },
         {
           "id": "04",
+          "date": "2021-06-25T07:20:42.138Z",
           "code": 700,
           "temperature": 8,
           "windSpeed": 1,
           "pressure": 1005,
           "windDirection": 101
+        },
+        {
+          "id": "4585e2e0-23d2-11ed-8646-d3d0312f8c57",
+          "date": "2022-8-24 18:29:13.486",
+          "code": "200",
+          "temperature": "50",
+          "windSpeed": "50",
+          "windDirection": "50",
+          "pressure": "50"
         }
       ],
       "minMaxValues": {
@@ -42,7 +54,12 @@
         "maxPressure": 1005,
         "minPressure": 1002
       },
-      "containsReadings": true
+      "containsReadings": true,
+      "weatherTrends": {
+        "temperatureTrend": "Increasing",
+        "windTrend": "Decreasing",
+        "pressureTrend": "Increasing"
+      }
     },
     {
       "id": "05",
@@ -55,6 +72,7 @@
       "readings": [
         {
           "id": "06",
+          "date": "2021-02-25T07:20:42.138Z",
           "code": 700,
           "temperature": 8,
           "windSpeed": 1,
@@ -63,6 +81,7 @@
         },
         {
           "id": "07",
+          "date": "2021-03-25T07:20:42.138Z",
           "code": 200,
           "temperature": 0.5,
           "windSpeed": 3.5,
@@ -71,6 +90,7 @@
         },
         {
           "id": "13057d30-11d0-11ed-b404-53813556e1b0",
+          "date": "2021-03-25T07:20:42.138Z",
           "code": "400",
           "temperature": "20",
           "windSpeed": "25",
@@ -86,7 +106,12 @@
         "maxPressure": 1000,
         "minPressure": 999
       },
-      "containsReadings": true
+      "containsReadings": true,
+      "weatherTrends": {
+        "temperatureTrend": "None",
+        "windTrend": "Increasing",
+        "pressureTrend": "None"
+      }
     },
     {
       "id": "dbab9d30-1ff1-11ed-b2b5-e12e06a1d5fa",
@@ -98,14 +123,19 @@
       },
       "readings": [],
       "minMaxValues": {
-        "maxTemperature": "35",
-        "minTemperature": "35",
-        "maxWind": "70",
-        "minWind": "70",
-        "maxPressure": "980",
-        "minPressure": "980"
+        "maxTemperature": null,
+        "minTemperature": null,
+        "maxWind": null,
+        "minWind": null,
+        "maxPressure": null,
+        "minPressure": null
       },
-      "containsReadings": true
+      "containsReadings": false,
+      "weatherTrends": {
+        "temperatureTrend": "None",
+        "windTrend": "None",
+        "pressureTrend": "None"
+      }
     }
   ]
 }

@@ -6,6 +6,13 @@ const reportCollection = require("../models/report-store");
 const stationAnalytics = require("../utils/station-analytics");
 const uuid = require("uuid");
 
+function getCurrentDate() {
+  const now = new Date();
+  const currentDate = now.getFullYear()+'-'+(now.getMonth()+1)+'-'+now.getDate()+' '
+    +now.getHours()+":"+now.getMinutes()+":"+now.getSeconds()+'.'+now.getMilliseconds();
+  return currentDate;
+}
+
 const stationControl = {
   index(request, response) {
     const stationId = request.params.id;
@@ -23,6 +30,7 @@ const stationControl = {
     const stationId = request.params.id;
     const newReading = {
       id: uuid.v1(),
+      date: getCurrentDate(),
       code: request.body.code,
       temperature: request.body.tempCelsius,
       windSpeed: request.body.speed,

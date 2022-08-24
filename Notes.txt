@@ -11,12 +11,14 @@
 (Y) Implement Member functionality
 ==RELEASE 2==
 
-(-) Add new reading field: timestamp
-(-) Implement weather trends
+(Y) Add new reading field: timestamp
+(Y) Implement weather trends
 (-) Implement functionality to update member details
 (Y) Move latest reading cards to the dashboard
 ==RELEASE 3==
 
-(-) Require users fill out all reading fields to submit successfully
-(-) Add text colours to trend for "Increasing" and "Decreasing"
+(-) Fix Timestamp seed data formatting
+(-) Implement validation of data type in reading fields and require all fields to create reading
+(-) Implement validation of data type in station fields and require all fields to create station
+(-) Add text colours to trend for "Increasing" and "Decreasing" and icons
 ==PATCH 1==

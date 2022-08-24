@@ -77,8 +77,9 @@ const stationStore = {
       }
     }
     return stations;
-  }
+  },
 };
+
 
 Handlebars.registerHelper("getWeatherLabel", function(name) {
   let stationReport = reportCollection.getOneReportByName(name);

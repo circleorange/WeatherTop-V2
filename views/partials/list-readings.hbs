@@ -1,6 +1,7 @@
 <table class="ui center aligned celled table">
   <thead>
     <tr>
+      <th>Timestamp</th>
       <th>Code</th>
       <th>Temperature (C)</th>
       <th>Wind Speed (km/h)</th>
@@ -12,6 +13,7 @@
   <tbody>
     {{#each station.readings}}
       <tr>
+        <td>{{date}}</td>
         <td>{{code}}</td>
         <td>{{temperature}}</td>
         <td>{{windSpeed}}</td>
