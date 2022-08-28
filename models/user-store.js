@@ -17,11 +17,19 @@ const userStore = {
   },
 
   getUserById(id) {
-    return this.store.findOneBy(this.collection, {id: id});
+    return this.store.findOneBy(this.collection, { id: id });
   },
 
   getUserByEmail(email) {
-    return this.store.findOneBy(this.collection, {email: email});
+    return this.store.findOneBy(this.collection, { email: email });
+  },
+
+  updateUser(user, updatedUser) {
+    user.firstName = updatedUser.firstName;
+    user.lastName = updatedUser.lastName;
+    user.email = updatedUser.email;
+    user.password = updatedUser.password;
+    this.store.save();
   }
 };
 

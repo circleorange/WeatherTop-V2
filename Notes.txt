@@ -3,7 +3,6 @@
 (Y) Implemented create/ delete functionality for stations and readings
 ==RELEASE 1== (complete)
 
-(Y) Refactor file names
 
 (Y) Add position coordinates to station
 (Y) Implement computation of Min-Max values of readings
@@ -11,14 +10,30 @@
 (Y) Implement Member functionality
 ==RELEASE 2==
 
+
 (Y) Add new reading field: timestamp
 (Y) Implement weather trends
-(-) Implement functionality to update member details
+(Y) Implement functionality to update member details
 (Y) Move latest reading cards to the dashboard
+(Y) List stations alphabetically
 ==RELEASE 3==
 
+
+(-) Auto Read from OpenWeather Map API
+(-) Station Map View
+(-) Graph of trends
+==RELEASE 4==
+
+
+(Y) Refactor file names
+(Y) Refactored authentication and now getCurrentUser works off user id instead of user email
+(-) Add text colours to trend for "Increasing" and "Decreasing" and icons
+(-) Allow users to update one field in Settings at a time
 (-) Fix Timestamp seed data formatting
+==UPGRADES==
+
+
 (-) Implement validation of data type in reading fields and require all fields to create reading
 (-) Implement validation of data type in station fields and require all fields to create station
-(-) Add text colours to trend for "Increasing" and "Decreasing" and icons
-==PATCH 1==
+(-) Implement validation of user authentication: check email against password
+==TO PATCH==

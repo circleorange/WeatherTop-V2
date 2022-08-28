@@ -9,13 +9,14 @@ const about = require("./controllers/about.js");
 const stationControl = require("./controllers/station-control");
 
 router.get("/", accounts.index);
+router.get("/settings", accounts.settings);
 router.get("/sign-in", accounts.signIn);
 router.get("/sign-up", accounts.signUp);
 router.get("/sign-out", accounts.signOut);
 router.post("/register", accounts.register);
 router.post("/authenticate", accounts.authenticate);
+router.post("/settings/save", accounts.updateUser);
 
-router.get("/", dashboard.index);
 router.get("/dashboard", dashboard.index);
 router.get("/about", about.index);
 

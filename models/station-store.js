@@ -22,7 +22,18 @@ const stationStore = {
   },
 
   getStationsByUserId(userId) {
-    return this.store.findBy(this.collection, {userId: userId});
+    let userStations = this.store.findBy(this.collection, {userId: userId});
+    return this.sortStationsByName(userStations);
+  },
+
+  sortStationsByName(userStations) {
+    let byName = userStations.slice(0);
+    byName.sort(function(a,b) {
+      let x = a.name.toLowerCase();
+      let y = b.name.toLowerCase();
+      return x < y ? -1 : x > y ? 1 : 0;
+    });
+    return byName;
   },
 
   createStation(stationName) {

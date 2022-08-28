@@ -47,18 +47,18 @@
         }
       ],
       "minMaxValues": {
-        "maxTemperature": 8,
+        "maxTemperature": "50",
         "minTemperature": 0.5,
-        "maxWind": 3.5,
+        "maxWind": "50",
         "minWind": 1,
         "maxPressure": 1005,
-        "minPressure": 1002
+        "minPressure": "50"
       },
       "containsReadings": true,
       "weatherTrends": {
         "temperatureTrend": "Increasing",
-        "windTrend": "Decreasing",
-        "pressureTrend": "Increasing"
+        "windTrend": "None",
+        "pressureTrend": "None"
       }
     },
     {

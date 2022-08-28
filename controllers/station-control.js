@@ -3,7 +3,6 @@
 const logger = require("../utils/logger");
 const stationCollection = require("../models/station-store");
 const reportCollection = require("../models/report-store");
-const stationAnalytics = require("../utils/station-analytics");
 const uuid = require("uuid");
 
 function getCurrentDate() {

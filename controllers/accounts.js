@@ -7,14 +7,29 @@ const uuid = require("uuid");
 const accounts = {
   index(request, response) {
     const viewData = {
-      title: "Login or Signup"
+      title: "Home"
     };
     response.render("index", viewData);
   },
 
+  settings(request, response) {
+    logger.info("RENDER_SETTINGS_PAGE");
+    const loggedInUser = accounts.getCurrentUser(request);
+    const viewData = {
+      title: "Settings",
+      user: loggedInUser
+    };
+    response.render("settings", viewData);
+  },
+
+  getCurrentUser(request) {
+    const user = request.cookies.userCookie;
+    return userStore.getUserById(user)
+  },
+
   signIn(request, response) {
     const viewData = {
-      title: "Login to the Service"
+      title: "Sign In to WeatherTop"
     };
     response.render("sign-in", viewData);
   },
@@ -26,7 +41,7 @@ const accounts = {
 
   signUp(request, response) {
     const viewData = {
-      title: "Login to the Service"
+      title: "Sing up to WeatherTop"
     };
     response.render("sign-up", viewData);
   },
@@ -42,7 +57,7 @@ const accounts = {
   authenticate(request, response) {
     const user = userStore.getUserByEmail(request.body.email);
     if (user) {
-      response.cookie("playlist", user.email);
+      response.cookie("userCookie", user.id);
       logger.info(`SIGNING_IN_AS: ${user.email}`);
       response.redirect("/dashboard");
     } else {
@@ -50,9 +65,17 @@ const accounts = {
     }
   },
 
-  getCurrentUser(request) {
-    const userEmail = request.cookies.playlist;
-    return userStore.getUserByEmail(userEmail);
+  updateUser(request, response) {
+    logger.info("ACTION_UPDATE_MEMBER_PENDING");
+    const loggedInUser = accounts.getCurrentUser(request);
+    const updatedUser = {
+      firstName: request.body.firstname,
+      lastName: request.body.lastname,
+      email: request.body.email,
+      password: request.body.password
+    }
+    userStore.updateUser(loggedInUser, updatedUser);
+    response.redirect("/settings");
   }
 };
 

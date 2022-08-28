@@ -1,20 +1,6 @@
 {
   "latestReport": [
     {
-      "name": "Tramore",
-      "readings": {
-        "code": "200",
-        "tempCelsius": "50",
-        "tempFahrenheit": 122,
-        "pressure": "50",
-        "windSpeed": "50",
-        "windDirection": "50",
-        "windChill": 60.00561679171416,
-        "compassDirection": "NE",
-        "beaufortReading": 7
-      }
-    },
-    {
       "name": "Dunmore",
       "readings": {
         "code": "400",
@@ -40,6 +26,20 @@
         "windChill": null,
         "compassDirection": null,
         "beaufortReading": null
+      }
+    },
+    {
+      "name": "Tramore",
+      "readings": {
+        "code": "200",
+        "tempCelsius": "50",
+        "tempFahrenheit": 122,
+        "pressure": "50",
+        "windSpeed": "50",
+        "windDirection": "50",
+        "windChill": 60.00561679171416,
+        "compassDirection": "NE",
+        "beaufortReading": 7
       }
     }
   ]

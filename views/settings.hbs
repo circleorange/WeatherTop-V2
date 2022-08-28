@@ -1,0 +1,29 @@
+{{> menu id="settings"}}
+
+<div class="ui attached message">
+  <div class="header">
+    Hey, {{user.firstName}}!
+  </div>
+  <p>Here you can review and manage your account details.</p>
+</div>
+<form class="ui form success attached fluid segment" action="/settings/save" method="POST">
+  <div class="two fields">
+    <div class="field">
+      <label>First Name</label>
+      <input placeholder="{{user.firstName}}" type="text" name="firstname">
+    </div>
+    <div class="field">
+      <label>Last Name</label>
+      <input placeholder="{{user.lastName}}" type="text" name="lastname">
+    </div>
+  </div>
+  <div class="field">
+    <label>Email</label>
+    <input placeholder="{{user.email}}" type="text" name="email">
+  </div>
+  <div class="field">
+    <label>Password</label>
+    <input placeholder="{{user.password}}" type="password" name="password">
+  </div>
+  <button class="ui positive submit button">Save</button>
+</form>

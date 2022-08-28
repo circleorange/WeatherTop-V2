@@ -1,8 +1,9 @@
 Welcome to WeatherTop V2
 =========================
 
-Baseline of the WeatherTop application.
+Release 3 of the WeatherTop application.
 
-- Four readings displayed: code, temperature, wind speed, and pressure
-- Station name, latest readings, and conversions are displayed
-- Data is loaded from json file and displayed on the dashboard
+- Reading field contains the timestamp field
+- Weather trends have been implemented
+- User can edit their personal details
+- Stations are listed alphabetically on the dashboard
