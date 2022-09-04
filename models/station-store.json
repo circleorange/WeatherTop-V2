@@ -121,16 +121,35 @@
         "latitude": "30",
         "longitude": "50"
       },
-      "readings": [],
+      "readings": [
+        {
+          "id": "95779560-2bc4-11ed-84b6-f1ecae0dd3ea",
+          "date": "2022-9-3 21:11:23.959",
+          "code": 800,
+          "temperature": 12.63,
+          "windSpeed": 4.3,
+          "pressure": 1002,
+          "windDirection": 140
+        },
+        {
+          "id": "962d77e0-2bc4-11ed-84b6-f1ecae0dd3ea",
+          "date": "2022-9-3 21:11:25.150",
+          "code": 800,
+          "temperature": 12.63,
+          "windSpeed": 4.3,
+          "pressure": 1002,
+          "windDirection": 140
+        }
+      ],
       "minMaxValues": {
-        "maxTemperature": null,
-        "minTemperature": null,
-        "maxWind": null,
-        "minWind": null,
-        "maxPressure": null,
-        "minPressure": null
+        "maxTemperature": 12.63,
+        "minTemperature": 12.63,
+        "maxWind": 4.3,
+        "minWind": 4.3,
+        "maxPressure": 1002,
+        "minPressure": 1002
       },
-      "containsReadings": false,
+      "containsReadings": true,
       "weatherTrends": {
         "temperatureTrend": "None",
         "windTrend": "None",

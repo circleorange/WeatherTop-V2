@@ -4,6 +4,7 @@ const logger = require("../utils/logger");
 const stationCollection = require("../models/station-store");
 const reportCollection = require("../models/report-store");
 const uuid = require("uuid");
+const axios = require("axios");
 
 function getCurrentDate() {
   const now = new Date();
@@ -47,6 +48,30 @@ const stationControl = {
     const stationId = request.params.id;
     const readingId = request.params.readingId;
     stationCollection.deleteReading(stationId, readingId);
+    let stations = stationCollection.getAllStations();
+    reportCollection.createLatestReport(stations);
+    response.redirect("/station/" + stationId);
+  },
+
+  async getReading(request, response) {
+    logger.info("ACTION_GET_READING");
+    const stationId = request.params.id;
+    const stationName = stationCollection.getStationById(stationId).name;
+    const requestUrl = `http://api.openweathermap.org/data/2.5/weather?q=${stationName},Ireland&units=metric&appid=8ea5a0b42cda3244cb96f9241ac39025`;
+    const result = await axios.get(requestUrl);
+
+    let report = {};
+    if (result.status == 200) {
+      const reading = result.data;
+      report.id = uuid.v1();
+      report.date = getCurrentDate();
+      report.code = Math.round(reading.weather[0].id / 100) * 100;
+      report.temperature = reading.main.temp;
+      report.windSpeed = reading.wind.speed;
+      report.pressure = reading.main.pressure;
+      report.windDirection = reading.wind.deg;
+    }
+    stationCollection.createReading(stationId, report);
     let stations = stationCollection.getAllStations();
     reportCollection.createLatestReport(stations);
     response.redirect("/station/" + stationId);

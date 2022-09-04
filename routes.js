@@ -21,10 +21,11 @@ router.get("/dashboard", dashboard.index);
 router.get("/about", about.index);
 
 router.get("/station/:id", stationControl.index);
-router.post("/dashboard/add-station", dashboard.createStation);
+router.post("/dashboard/create-station", dashboard.createStation);
 router.get("/dashboard/delete-station/:id", dashboard.deleteStation);
 
-router.post("/station/:id/add-reading", stationControl.createReading);
+router.post("/station/:id/create-reading", stationControl.createReading);
 router.get("/station/:id/delete-reading/:readingId", stationControl.deleteReading);
+router.get("/station/:id/get-reading", stationControl.getReading);
 
 module.exports = router;

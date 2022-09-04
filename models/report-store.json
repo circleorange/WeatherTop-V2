@@ -17,15 +17,15 @@
     {
       "name": "test",
       "readings": {
-        "code": null,
-        "tempCelsius": null,
-        "tempFahrenheit": null,
-        "pressure": null,
-        "windSpeed": null,
-        "windDirection": null,
-        "windChill": null,
-        "compassDirection": null,
-        "beaufortReading": null
+        "code": 800,
+        "tempCelsius": 12.63,
+        "tempFahrenheit": 54.734,
+        "pressure": 1002,
+        "windSpeed": 4.3,
+        "windDirection": 140,
+        "windChill": 12.934975505198612,
+        "compassDirection": "SE",
+        "beaufortReading": 1
       }
     },
     {

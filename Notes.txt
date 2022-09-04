@@ -19,7 +19,7 @@
 ==RELEASE 3==
 
 
-(-) Auto Read from OpenWeather Map API
+(Y) Get readings from OpenWeather Map API
 (-) Station Map View
 (-) Graph of trends
 ==RELEASE 4==
@@ -36,4 +36,5 @@
 (-) Implement validation of data type in reading fields and require all fields to create reading
 (-) Implement validation of data type in station fields and require all fields to create station
 (-) Implement validation of user authentication: check email against password
+(-) Implement Exception handling in getReading for invalid station name
 ==TO PATCH==

@@ -1,13 +1,7 @@
 <table class="ui center aligned celled table">
   <thead>
     <tr>
-      <th>Timestamp</th>
-      <th>Code</th>
-      <th>Temperature (C)</th>
-      <th>Wind Speed (km/h)</th>
-      <th>Wind Direction</th>
-      <th>Pressure (hPa)</th>
-      <th>Action</th>
+      {{> reading-header}}
     </tr>
   </thead>
   <tbody>
@@ -21,7 +15,7 @@
         <td>{{pressure}}</td>
         <td>
           <a href="/station/{{../station.id}}/delete-reading/{{id}}" class="ui red icon button">
-            <i class="icon trash"></i> Delete
+            <i class="icon trash"></i>&nbsp; Delete
           </a>
         </td>
       </tr>
