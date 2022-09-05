@@ -22,6 +22,9 @@
 (Y) Get readings from OpenWeather Map API
 (-) Station Map View
 (-) Graph of trends
+    (Y) Temperature
+    (-) Wind
+    (-) Pressure
 ==RELEASE 4==
 
 

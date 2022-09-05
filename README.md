@@ -7,3 +7,5 @@ Release 3 of the WeatherTop application.
 - Weather trends have been implemented
 - User can edit their personal details
 - Stations are listed alphabetically on the dashboard
+- Get readings from OpenWeather Map API
+- Simple line graph of temperature

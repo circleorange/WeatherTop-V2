@@ -12,15 +12,66 @@ function getCurrentDate() {
     +now.getHours()+":"+now.getMinutes()+":"+now.getSeconds()+'.'+now.getMilliseconds();
   return currentDate;
 }
+/*
+async function callCoordinatesById(id) {
+  const stationName = stationCollection.getStationById(id).name;
+  let requestUrl = `http://api.openweathermap.org/geo/1.0/direct?q=${stationName},Ireland&units=metric&appid=8ea5a0b42cda3244cb96f9241ac39025`;
+  const result = await axios.get(requestUrl);
 
+  let stationCoordinates = {};
+  if (result.status == 200) {
+    const reading = result.data;
+    stationCoordinates.lat = reading[0].lat;
+    stationCoordinates.lon = reading[0].lon;
+  }
+  return stationCoordinates;
+}
+
+async function callWeeklyForecast(coordinates) {
+  const stationCoordinates = coordinates;
+  let requestUrl = `http://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lat}&appid=8ea5a0b42cda3244cb96f9241ac39025&units=metric`;
+  const result = await axios.get(requestUrl);
+
+  let report = {};
+  if (result.status == 200) {
+    report.tempTrend = [];
+    report.trendLabels = [];
+    const trends = result.data.daily;
+    for (let i = 0; i < trends.length; i++) {
+      report.tempTrend.push(trends[i].temp.day);
+      const date = new Date(trends[i].dt * 1000);
+      report.trendLabels.push(`${date.getDate()}/${date.getMonth()}/${date.getFullYear()}`);
+    }
+  }
+}
+*/
 const stationControl = {
-  index(request, response) {
+  async index(request, response) {
     const stationId = request.params.id;
     logger.debug("OPEN_STATION_ID(" + stationId + ")");
-    const currStation = stationCollection.getStationById(stationId);
+    const currentStation = stationCollection.getStationById(stationId);
+
+    //const coordinates = callCoordinatesById(stationId);
+    //const weeklyForecast = callWeeklyForecast(coordinates);
+    //const stationName = currentStation.name;
+    let requestUrl = `http://api.openweathermap.org/data/2.5/forecast?lat=${currentStation.position.latitude}&lon=${currentStation.position.longitude}&appid=8ea5a0b42cda3244cb96f9241ac39025&units=metric`;
+    const result = await axios.get(requestUrl);
+    let report = {};
+    if (result.status == 200) {
+      report.tempTrend = [];
+      report.trendLabels = [];
+      const trends = result.data.list;
+      for (let i = 0; i < trends.length; i+=6) {
+        report.tempTrend.push(trends[i].main.temp);
+        const date = new Date(trends[i].dt * 1000);
+        report.trendLabels.push(`${date.getHours()}:00 ${date.getDate()}/${date.getMonth()}/${date.getFullYear()}`);
+      }
+    }
+
     const viewData = {
       title: "Station",
-      station: currStation,
+      station: currentStation,
+      reading: report
     };
     response.render("station", viewData);
   },
@@ -75,7 +126,7 @@ const stationControl = {
     let stations = stationCollection.getAllStations();
     reportCollection.createLatestReport(stations);
     response.redirect("/station/" + stationId);
-  }
+  },
 };
 
 module.exports = stationControl;
