@@ -3,15 +3,15 @@
     {
       "name": "Dunmore",
       "readings": {
-        "code": "400",
-        "tempCelsius": "20",
-        "tempFahrenheit": 68,
-        "pressure": "999",
-        "windSpeed": "25",
-        "windDirection": "200",
-        "windChill": 19.7925676464765,
-        "compassDirection": "SSW",
-        "beaufortReading": 4
+        "code": 800,
+        "tempCelsius": 21.93,
+        "tempFahrenheit": 71.474,
+        "pressure": 1014,
+        "windSpeed": 2.57,
+        "windDirection": 110,
+        "windChill": 23.638686279311344,
+        "compassDirection": "ESE",
+        "beaufortReading": 1
       }
     },
     {

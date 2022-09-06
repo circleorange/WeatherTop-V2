@@ -96,6 +96,15 @@
           "windSpeed": "25",
           "windDirection": "200",
           "pressure": "999"
+        },
+        {
+          "id": "c3d09e90-2e1a-11ed-8480-b1badb655b42",
+          "date": "2022-9-6 20:33:20.762",
+          "code": 800,
+          "temperature": 21.93,
+          "windSpeed": 2.57,
+          "pressure": 1014,
+          "windDirection": 110
         }
       ],
       "minMaxValues": {

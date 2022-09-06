@@ -60,25 +60,27 @@
         <div class="ui two column grid">
           <div class="column">
             <div class="description">Currently</div>
-            <div class="description">Min - Max</div>
-            <div class="description">Fahrenheit</div>
+            <div class="description">Minimum</div>
+            <div class="description">Maximum</div>
           </div>
 
           <div class="column">
             <b>{{getTempCelsius name}}</b>
-            <div class="description">{{minMaxValues.minTemperature}} - {{minMaxValues.maxTemperature}} C</div>
-            <div class="description">{{getTempFahrenheit name}}</div>
+            <div class="description">{{minMaxValues.minTemperature}} C</div>
+            <div class="description">{{minMaxValues.maxTemperature}} C</div>
           </div>
         </div>
         <div class="ui divider"></div>
 
         <div class="ui two column grid">
           <div class="column">
+            <div class="description">Fahrenheit</div>
             <div class="description">Wind Chill</div>
           </div>
 
           <div class="column">
             <b>
+              <div class="description">{{getTempFahrenheit name}}</div>
               <div class="description">{{getWindChill name}}</div>
             </b>
           </div>
@@ -125,6 +127,7 @@
             </b>
           </div>
         </div>
+        <div class="ui hidden divider"></div>
         <div class="ui divider"></div>
         <div>Trend: <b>{{weatherTrends.windTrend}}</b></div>
       </div>
@@ -155,6 +158,7 @@
           </div>
         </div>
         <div class="ui divider"></div>
+        <div class="ui hidden divider"></div>
         <div class="ui hidden divider"></div>
         <div class="ui hidden divider"></div>
         <div class="ui divider"></div>

@@ -21,10 +21,10 @@
 
 (Y) Get readings from OpenWeather Map API
 (-) Station Map View
-(-) Graph of trends
+(Y) Graph of trends
     (Y) Temperature
-    (-) Wind
-    (-) Pressure
+    (Y) Wind
+    (Y) Pressure
 ==RELEASE 4==
 
 
@@ -33,11 +33,9 @@
 (-) Add text colours to trend for "Increasing" and "Decreasing" and icons
 (-) Allow users to update one field in Settings at a time
 (-) Fix Timestamp seed data formatting
-==UPGRADES==
-
-
 (-) Implement validation of data type in reading fields and require all fields to create reading
 (-) Implement validation of data type in station fields and require all fields to create station
 (-) Implement validation of user authentication: check email against password
 (-) Implement Exception handling in getReading for invalid station name
+(-) Refactor and optimize chart methods
 ==TO PATCH==

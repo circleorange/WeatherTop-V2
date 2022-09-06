@@ -35,7 +35,7 @@ const accounts = {
   },
 
   signOut(request, response) {
-    response.cookie("playlist", "");
+    response.cookie("userCookie", "");
     response.redirect("/");
   },
 

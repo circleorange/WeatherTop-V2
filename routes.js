@@ -28,4 +28,7 @@ router.post("/station/:id/create-reading", stationControl.createReading);
 router.get("/station/:id/delete-reading/:readingId", stationControl.deleteReading);
 router.get("/station/:id/get-reading", stationControl.getReading);
 
+router.get("/station/:id/chart/wind-speed", stationControl.getSpeedChart);
+router.get("/station/:id/chart/pressure", stationControl.getPressureChart);
+
 module.exports = router;
