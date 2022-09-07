@@ -13,13 +13,14 @@ const accounts = {
   },
 
   settings(request, response) {
-    logger.info("RENDER_SETTINGS_PAGE");
+    logger.info("RENDER_SETTINGS_PAGE_START");
     const loggedInUser = accounts.getCurrentUser(request);
     const viewData = {
       title: "Settings",
       user: loggedInUser
     };
     response.render("settings", viewData);
+    logger.info("RENDER_SETTINGS_PAGE_FINISHED");
   },
 
   getCurrentUser(request) {

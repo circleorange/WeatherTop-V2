@@ -23,6 +23,7 @@ router.get("/about", about.index);
 router.get("/station/:id", stationControl.index);
 router.post("/dashboard/create-station", dashboard.createStation);
 router.get("/dashboard/delete-station/:id", dashboard.deleteStation);
+router.get("/station/:id/fetch-coordinates", dashboard.fetchStationCoordinates);
 
 router.post("/station/:id/create-reading", stationControl.createReading);
 router.get("/station/:id/delete-reading/:readingId", stationControl.deleteReading);

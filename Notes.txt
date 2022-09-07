@@ -32,12 +32,16 @@
 ==RELEASE 4==
 
 
+(Y) Implementation of fetch station coordinates
+(Y) Validation of reading fields
+(Y) Validation of station fields
+(Y) Fix Timestamp seed data formatting
+==PATCH 1==
+
+
 (-) Add text colours to trend for "Increasing" and "Decreasing" and icons
 (-) Allow users to update one field in Settings at a time
-(-) Fix Timestamp seed data formatting
-(-) Implement validation of data type in reading fields and require all fields to create reading
-(-) Implement validation of data type in station fields and require all fields to create station
 (-) Implement validation of user authentication: check email against password
-(-) Implement Exception handling in getReading for invalid station name
+(-) Implement Exception handling in fetching readings for invalid station name
 (-) Refactor and optimize chart methods
 ==TO PATCH==

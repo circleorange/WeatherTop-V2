@@ -1,6 +1,20 @@
 {
   "latestReport": [
     {
+      "name": "Donegal",
+      "readings": {
+        "code": 500,
+        "tempCelsius": 16.03,
+        "tempFahrenheit": "60.85",
+        "pressure": 1000,
+        "windSpeed": 4.99,
+        "windDirection": 108,
+        "windChill": 16.597950639441557,
+        "compassDirection": "ESE",
+        "beaufortReading": 1
+      }
+    },
+    {
       "name": "Dunmore",
       "readings": {
         "code": 800,
@@ -18,12 +32,26 @@
       "name": "Galway",
       "readings": {
         "code": 800,
-        "tempCelsius": 16.83,
-        "tempFahrenheit": "62.29",
+        "tempCelsius": 16.12,
+        "tempFahrenheit": "61.02",
         "pressure": 997,
-        "windSpeed": 4.73,
-        "windDirection": 119,
-        "windChill": 17.557168188499816,
+        "windSpeed": 3.73,
+        "windDirection": 87,
+        "windChill": 16.992970717708328,
+        "compassDirection": "East",
+        "beaufortReading": 1
+      }
+    },
+    {
+      "name": "Limerick",
+      "readings": {
+        "code": 800,
+        "tempCelsius": 15.97,
+        "tempFahrenheit": "60.75",
+        "pressure": 996,
+        "windSpeed": 4.8,
+        "windDirection": 118,
+        "windChill": 16.570236665768245,
         "compassDirection": "ESE",
         "beaufortReading": 1
       }

@@ -123,40 +123,6 @@
       }
     },
     {
-      "id": "8be9ef90-2ea1-11ed-9f63-338279ee97cf",
-      "userId": "3ad52697-6d98-4d80-8273-084de55a86c0",
-      "name": "Galway",
-      "position": {
-        "latitude": "53.2744",
-        "longitude": "-9.0491"
-      },
-      "readings": [
-        {
-          "id": "90036f70-2ea1-11ed-9f63-338279ee97cf",
-          "date": "2022-9-7 12:38:15.911",
-          "code": 800,
-          "temperature": 16.83,
-          "windSpeed": 4.73,
-          "pressure": 997,
-          "windDirection": 119
-        }
-      ],
-      "minMaxValues": {
-        "maxTemperature": 16.83,
-        "minTemperature": 16.83,
-        "maxWind": 4.73,
-        "minWind": 4.73,
-        "maxPressure": 997,
-        "minPressure": 997
-      },
-      "weatherTrends": {
-        "temperatureTrend": "None",
-        "windTrend": "None",
-        "pressureTrend": "None"
-      },
-      "containsReadings": true
-    },
-    {
       "id": "fbf72c50-2ebd-11ed-8337-812cbcc296fa",
       "userId": "3ad52697-6d98-4d80-8273-084de55a86c0",
       "name": "Newry",
@@ -182,6 +148,117 @@
         "minWind": 7.1,
         "maxPressure": 1001,
         "minPressure": 1001
+      },
+      "weatherTrends": {
+        "temperatureTrend": "None",
+        "windTrend": "None",
+        "pressureTrend": "None"
+      },
+      "containsReadings": true
+    },
+    {
+      "id": "7613b6d0-2ec2-11ed-97c3-9f93d7d0b238",
+      "userId": "3ad52697-6d98-4d80-8273-084de55a86c0",
+      "name": "Donegal",
+      "position": {
+        "latitude": "54.6538",
+        "longitude": "-8.1103"
+      },
+      "readings": [
+        {
+          "id": "0c980330-2ec4-11ed-808b-b7762d067543",
+          "date": "2022-9-7 16:45:7.812",
+          "code": 800,
+          "temperature": 16.03,
+          "windSpeed": 4.99,
+          "pressure": 1000,
+          "windDirection": 108
+        },
+        {
+          "id": "ee30c7d0-2ec6-11ed-a3b0-51fc88c05351",
+          "date": "2022-9-7 17:5:45.293",
+          "code": 500,
+          "temperature": 16.03,
+          "windSpeed": 4.99,
+          "pressure": 1000,
+          "windDirection": 108
+        }
+      ],
+      "minMaxValues": {
+        "maxTemperature": 16.03,
+        "minTemperature": 16.03,
+        "maxWind": 4.99,
+        "minWind": 4.99,
+        "maxPressure": 1000,
+        "minPressure": 1000
+      },
+      "weatherTrends": {
+        "temperatureTrend": "None",
+        "windTrend": "None",
+        "pressureTrend": "None"
+      },
+      "containsReadings": true
+    },
+    {
+      "id": "a0f80570-2ec4-11ed-808b-b7762d067543",
+      "userId": "3ad52697-6d98-4d80-8273-084de55a86c0",
+      "name": "Galway",
+      "position": {
+        "latitude": "53.2744",
+        "longitude": "-9.0491"
+      },
+      "readings": [
+        {
+          "id": "37ae4400-2ed6-11ed-8d5b-d1beefd462a5",
+          "date": "2022-9-7 18:55:11.40",
+          "code": 800,
+          "temperature": 16.12,
+          "windSpeed": 3.73,
+          "pressure": 997,
+          "windDirection": 87
+        }
+      ],
+      "minMaxValues": {
+        "maxTemperature": null,
+        "minTemperature": null,
+        "maxWind": null,
+        "minWind": null,
+        "maxPressure": null,
+        "minPressure": null
+      },
+      "weatherTrends": {
+        "temperatureTrend": "None",
+        "windTrend": "None",
+        "pressureTrend": "None"
+      },
+      "containsReadings": false
+    },
+    {
+      "id": "a8dc7660-2ecc-11ed-b3dd-ad53485d40a4",
+      "userId": "3ad52697-6d98-4d80-8273-084de55a86c0",
+      "name": "Limerick",
+      "position": {
+        "latitude": "52.6648",
+        "longitude": "-8.6362"
+      },
+      "readings": [
+        {
+          "id": "b39c89a0-2ecc-11ed-b3dd-ad53485d40a4",
+          "date": "2022-9-7 17:47:3.994",
+          "code": 800,
+          "temperature": 15.97,
+          "windSpeed": 4.8,
+          "pressure": 996,
+          "windDirection": 118
+        }
+      ],
+      "minMaxValues": {
+        "maxTemperature": 15.97,
+        "minTemperature": 15.97,
+        "maxWind": 4.8,
+        "minWind": 4.8,
+        "maxPressure": 996,
+        "minPressure": 996
       },
       "weatherTrends": {
         "temperatureTrend": "None",

@@ -1,22 +1,21 @@
-<section class="ui raised segment">
-  <h2 class="ui header">{{name}}</h2>
+<div class="ui grid">
+  <div class="four column row">
+    <div class="column">
+      <a href="/station/{{id}}" class="ui icon button">
+        <i class="folder open icon"></i>&nbsp; View readings
+      </a>
+    </div>
 
-  <div class="ui grid">
+    <div class="left floated column">
+      <a href="/station/{{id}}/fetch-coordinates" class="ui icon button">
+        <i class="icon cloud download"></i>&nbsp;&nbsp; Fetch Station Coordinates
+      </a>
+    </div>
 
-    <div class="two column row">
-      <div class="column">
-        <a href="/station/{{id}}" class="ui icon button">
-          <i class="folder open icon"></i> View readings
-        </a>
-      </div>
-
-      <div class="right aligned column">
-        <a href="/dashboard/delete-station/{{id}}" class="ui red icon button">
-          <i class="trash icon"></i> Delete station
-        </a>
-      </div>
-
+    <div class="right aligned column">
+      <a href="/dashboard/delete-station/{{id}}" class="ui red icon button">
+        <i class="trash icon"></i>&nbsp; Delete station
+      </a>
     </div>
   </div>
-</section>
-
+</div>
