@@ -8,6 +8,7 @@
 (Y) Implement computation of Min-Max values of readings
 (Y) Create registration and log in pages
 (Y) Implement Member functionality
+(Y) Refactor file names
 ==RELEASE 2==
 
 
@@ -16,11 +17,14 @@
 (Y) Implement functionality to update member details
 (Y) Move latest reading cards to the dashboard
 (Y) List stations alphabetically
+(Y) Refactored authentication and getCurrentUser works off user id instead of user email
 ==RELEASE 3==
 
 
 (Y) Get readings from OpenWeather Map API
-(-) Station Map View
+(Y) Station Map View
+    (Y) Display map
+    (Y) Display markers
 (Y) Graph of trends
     (Y) Temperature
     (Y) Wind
@@ -28,8 +32,6 @@
 ==RELEASE 4==
 
 
-(Y) Refactor file names
-(Y) Refactored authentication and now getCurrentUser works off user id instead of user email
 (-) Add text colours to trend for "Increasing" and "Decreasing" and icons
 (-) Allow users to update one field in Settings at a time
 (-) Fix Timestamp seed data formatting

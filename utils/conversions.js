@@ -1,5 +1,9 @@
 "use strict";
 
+function roundTo2Decimals(num) {
+  return Math.round(num / 100) * 100;
+}
+
 const conversions = {
   getWeatherLabel(code) {
     if (code == "") {return "";}
@@ -15,7 +19,8 @@ const conversions = {
   },
 
   getFahrenheit(celsius) {
-    return celsius * (9/5) + 32;
+    let fahrenheit = celsius * (9/5) + 32;
+    return fahrenheit.toFixed(2);
   },
 
   getBeaufortReading(speed) {

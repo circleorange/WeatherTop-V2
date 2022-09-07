@@ -2,9 +2,7 @@
 
 const stationAnalytics = {
   getMaxTemp(station) {
-    if (station.readings.length == 0) {
-      return null;
-    }
+    if (station.readings.length == 0) { return null; }
     let maxTemp = station.readings[0].temperature;
     for (let i = 0; i < station.readings.length; i++) {
       if (station.readings[i].temperature > maxTemp) {
@@ -15,9 +13,7 @@ const stationAnalytics = {
   },
 
   getMinTemp(station) {
-    if (station.readings.length == 0) {
-      return null;
-    }
+    if (station.readings.length == 0) { return null; }
     let minTemp = station.readings[0].temperature;
     for (let i = 0; i < station.readings.length; i++) {
       if (station.readings[i].temperature < minTemp) {
@@ -28,9 +24,7 @@ const stationAnalytics = {
   },
 
   getMaxWindSpeed(station) {
-    if (station.readings.length == 0) {
-      return null;
-    }
+    if (station.readings.length == 0) { return null; }
     let maxWindSpeed = station.readings[0].windSpeed;
     for (let i = 0; i < station.readings.length; i++) {
       if (station.readings[i].windSpeed > maxWindSpeed) {
@@ -41,9 +35,7 @@ const stationAnalytics = {
   },
 
   getMinWindSpeed(station) {
-    if (station.readings.length == 0) {
-      return null;
-    }
+    if (station.readings.length == 0) { return null; }
     let minWindSpeed = station.readings[0].windSpeed;
     for (let i = 0; i < station.readings.length; i++) {
       if (station.readings[i].windSpeed < minWindSpeed) {
@@ -54,9 +46,7 @@ const stationAnalytics = {
   },
 
   getMaxPressure(station) {
-    if (station.readings.length == 0) {
-      return null;
-    }
+    if (station.readings.length == 0) { return null; }
     let maxPressure = station.readings[0].pressure;
     for (let i = 0; i < station.readings.length; i++) {
       if (station.readings[i].pressure > maxPressure) {
@@ -67,9 +57,7 @@ const stationAnalytics = {
   },
 
   getMinPressure(station) {
-    if (station.readings.length == 0) {
-      return null;
-    }
+    if (station.readings.length == 0) { return null; }
     let minPressure = station.readings[0].pressure;
     for (let i = 0; i < station.readings.length; i++) {
       if (station.readings[i].pressure < minPressure) {
@@ -80,9 +68,7 @@ const stationAnalytics = {
   },
 
   getTemperatureTrend(station) {
-    if (station.readings.length < 3) {
-      return "None";
-    }
+    if (station.readings.length < 3) { return "None"; }
     else {
       let trendCounter = 0;
       for (let i = 1; i < 3; i++) {
@@ -99,9 +85,7 @@ const stationAnalytics = {
   },
 
   getWindTrend(station) {
-    if (station.readings.length < 3) {
-      return "None";
-    }
+    if (station.readings.length < 3) { return "None"; }
     else {
       let trendCounter = 0;
       for (let i = 1; i < 3; i++) {
@@ -118,9 +102,7 @@ const stationAnalytics = {
   },
 
   getPressureTrend(station) {
-    if (station.readings.length < 3) {
-      return "None";
-    }
+    if (station.readings.length < 3) { return "None"; }
     else {
       let trendCounter = 0;
       for (let i = 1; i < 3; i++) {

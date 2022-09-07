@@ -5,7 +5,7 @@
       "readings": {
         "code": 800,
         "tempCelsius": 21.93,
-        "tempFahrenheit": 71.474,
+        "tempFahrenheit": "71.47",
         "pressure": 1014,
         "windSpeed": 2.57,
         "windDirection": 110,
@@ -15,17 +15,31 @@
       }
     },
     {
-      "name": "test",
+      "name": "Galway",
       "readings": {
         "code": 800,
-        "tempCelsius": 12.63,
-        "tempFahrenheit": 54.734,
-        "pressure": 1002,
-        "windSpeed": 4.3,
-        "windDirection": 140,
-        "windChill": 12.934975505198612,
-        "compassDirection": "SE",
+        "tempCelsius": 16.83,
+        "tempFahrenheit": "62.29",
+        "pressure": 997,
+        "windSpeed": 4.73,
+        "windDirection": 119,
+        "windChill": 17.557168188499816,
+        "compassDirection": "ESE",
         "beaufortReading": 1
+      }
+    },
+    {
+      "name": "Newry",
+      "readings": {
+        "code": 800,
+        "tempCelsius": 17.84,
+        "tempFahrenheit": "64.11",
+        "pressure": 1001,
+        "windSpeed": 7.1,
+        "windDirection": 133,
+        "windChill": 18.328470292560176,
+        "compassDirection": "SE",
+        "beaufortReading": 2
       }
     },
     {
@@ -33,7 +47,7 @@
       "readings": {
         "code": "200",
         "tempCelsius": "50",
-        "tempFahrenheit": 122,
+        "tempFahrenheit": "122.00",
         "pressure": "50",
         "windSpeed": "50",
         "windDirection": "50",

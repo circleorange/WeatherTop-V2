@@ -6,6 +6,7 @@ const reportStore = require("../models/report-store");
 const accounts = require("./accounts.js");
 const uuid = require("uuid");
 
+
 const dashboard = {
   index(request, response) {
     logger.info("RENDER_DASHBOARD");
@@ -28,8 +29,8 @@ const dashboard = {
       userId: loggedInUser.id,
       name: request.body.name,
       position: {
-        latitude: request.body.latitude,
-        longitude: request.body.longitude,
+        latitude: parseFloat(request.body.latitude).toFixed(4),
+        longitude: parseFloat(request.body.longitude).toFixed(4),
       },
       readings: [],
     };

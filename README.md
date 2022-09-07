@@ -1,11 +1,12 @@
 Welcome to WeatherTop V2
 =========================
 
-Release 3 of the WeatherTop application.
+Release 4 of the WeatherTop application.
 
-- Reading field contains the timestamp field
-- Weather trends have been implemented
+- Reading contains all fields
+- Weather trends
 - User can edit their personal details
-- Stations are listed alphabetically on the dashboard
-- Get readings from OpenWeather Map API
-- Simple line graph of temperature
+- Stations are listed alphabetically
+- Fetch readings from OpenWeather Map API
+- Simple line graph of trends
+- Station Map View with station markers

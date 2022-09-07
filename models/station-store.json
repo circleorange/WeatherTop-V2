@@ -11,7 +11,7 @@
       "readings": [
         {
           "id": "02",
-          "date": "2021-04-25T07:20:42.138Z",
+          "date": "2021-04-25 07:20:42.138",
           "code": 800,
           "temperature": 0.5,
           "windSpeed": 3.5,
@@ -20,7 +20,7 @@
         },
         {
           "id": "03",
-          "date": "2021-05-25T07:20:42.138Z",
+          "date": "2021-05-25 07:20:42.138",
           "code": 600,
           "temperature": 6,
           "windSpeed": 2,
@@ -29,7 +29,7 @@
         },
         {
           "id": "04",
-          "date": "2021-06-25T07:20:42.138Z",
+          "date": "2021-06-25 07:20:42.138",
           "code": 700,
           "temperature": 8,
           "windSpeed": 1,
@@ -72,7 +72,7 @@
       "readings": [
         {
           "id": "06",
-          "date": "2021-02-25T07:20:42.138Z",
+          "date": "2021-02-25 07:20:42.138",
           "code": 700,
           "temperature": 8,
           "windSpeed": 1,
@@ -81,7 +81,7 @@
         },
         {
           "id": "07",
-          "date": "2021-03-25T07:20:42.138Z",
+          "date": "2021-03-25 07:20:42.138",
           "code": 200,
           "temperature": 0.5,
           "windSpeed": 3.5,
@@ -90,7 +90,7 @@
         },
         {
           "id": "13057d30-11d0-11ed-b404-53813556e1b0",
-          "date": "2021-03-25T07:20:42.138Z",
+          "date": "2021-03-25 07:20:42.138",
           "code": "400",
           "temperature": "20",
           "windSpeed": "25",
@@ -108,62 +108,87 @@
         }
       ],
       "minMaxValues": {
-        "maxTemperature": "20",
+        "maxTemperature": 21.93,
         "minTemperature": 0.5,
         "maxWind": "25",
         "minWind": 1,
-        "maxPressure": 1000,
+        "maxPressure": 1014,
         "minPressure": 999
       },
       "containsReadings": true,
       "weatherTrends": {
-        "temperatureTrend": "None",
-        "windTrend": "Increasing",
+        "temperatureTrend": "Increasing",
+        "windTrend": "None",
         "pressureTrend": "None"
       }
     },
     {
-      "id": "dbab9d30-1ff1-11ed-b2b5-e12e06a1d5fa",
+      "id": "8be9ef90-2ea1-11ed-9f63-338279ee97cf",
       "userId": "3ad52697-6d98-4d80-8273-084de55a86c0",
-      "name": "test",
+      "name": "Galway",
       "position": {
-        "latitude": "30",
-        "longitude": "50"
+        "latitude": "53.2744",
+        "longitude": "-9.0491"
       },
       "readings": [
         {
-          "id": "95779560-2bc4-11ed-84b6-f1ecae0dd3ea",
-          "date": "2022-9-3 21:11:23.959",
+          "id": "90036f70-2ea1-11ed-9f63-338279ee97cf",
+          "date": "2022-9-7 12:38:15.911",
           "code": 800,
-          "temperature": 12.63,
-          "windSpeed": 4.3,
-          "pressure": 1002,
-          "windDirection": 140
-        },
-        {
-          "id": "962d77e0-2bc4-11ed-84b6-f1ecae0dd3ea",
-          "date": "2022-9-3 21:11:25.150",
-          "code": 800,
-          "temperature": 12.63,
-          "windSpeed": 4.3,
-          "pressure": 1002,
-          "windDirection": 140
+          "temperature": 16.83,
+          "windSpeed": 4.73,
+          "pressure": 997,
+          "windDirection": 119
         }
       ],
       "minMaxValues": {
-        "maxTemperature": 12.63,
-        "minTemperature": 12.63,
-        "maxWind": 4.3,
-        "minWind": 4.3,
-        "maxPressure": 1002,
-        "minPressure": 1002
+        "maxTemperature": 16.83,
+        "minTemperature": 16.83,
+        "maxWind": 4.73,
+        "minWind": 4.73,
+        "maxPressure": 997,
+        "minPressure": 997
       },
-      "containsReadings": true,
       "weatherTrends": {
         "temperatureTrend": "None",
         "windTrend": "None",
         "pressureTrend": "None"
-      }
+      },
+      "containsReadings": true
+    },
+    {
+      "id": "fbf72c50-2ebd-11ed-8337-812cbcc296fa",
+      "userId": "3ad52697-6d98-4d80-8273-084de55a86c0",
+      "name": "Newry",
+      "position": {
+        "latitude": "54.1734",
+        "longitude": "-6.3388"
+      },
+      "readings": [
+        {
+          "id": "9d09a680-2ebf-11ed-96cb-e3aa74b28f93",
+          "date": "2022-9-7 16:13:22.665",
+          "code": 800,
+          "temperature": 17.84,
+          "windSpeed": 7.1,
+          "pressure": 1001,
+          "windDirection": 133
+        }
+      ],
+      "minMaxValues": {
+        "maxTemperature": 17.84,
+        "minTemperature": 17.84,
+        "maxWind": 7.1,
+        "minWind": 7.1,
+        "maxPressure": 1001,
+        "minPressure": 1001
+      },
+      "weatherTrends": {
+        "temperatureTrend": "None",
+        "windTrend": "None",
+        "pressureTrend": "None"
+      },
+      "containsReadings": true
     }
   ]
 }
