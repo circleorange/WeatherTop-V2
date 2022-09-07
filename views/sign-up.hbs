@@ -16,26 +16,30 @@
           <h3 class="ui header">Register</h3>
           <div class="ui divider"></div>
           <div class="two fields">
-            <div class="field">
+
+            <div class="required field">
               <label>First Name</label>
               <input placeholder="First Name" type="text" name="firstName">
             </div>
-            <div class="field">
+
+            <div class="required field">
               <label>Last Name</label>
               <input placeholder="Last Name" type="text" name="lastName">
             </div>
           </div>
-          <div class="field">
+
+          <div class="required field">
             <label>Email</label>
             <input placeholder="Email" type="text" name="email">
           </div>
-          <div class="field">
+
+          <div class="required field">
             <label>Password</label>
             <input placeholder="Password" type="password" name="password">
           </div>
           <button class="ui blue submit button">Sign up</button>
+          <div class="ui error message"></div>
         </form>
-
       </div>
     </div>
   </div>
@@ -45,3 +49,47 @@
   <i class="icon help"></i>
   Already have an account? <a href="/sign-in">Go to login page.</a>
 </div>
+
+<script>
+  $('.ui.form')
+    .form({
+      fields: {
+        firstName: {
+          identifier  : 'firstName',
+          rules: [
+            {
+              type   : 'empty',
+              prompt : 'Please enter your first name.'
+            }
+          ]
+        },
+        lastName: {
+          identifier  : 'lastName',
+          rules: [
+            {
+              type   : 'empty',
+              prompt : 'Please enter your last name.'
+            }
+          ]
+        },
+        email: {
+          identifier  : 'email',
+          rules: [
+            {
+              type   : 'empty',
+              prompt : 'Please enter your email.'
+            }
+          ]
+        },
+        password: {
+          identifier  : 'password',
+          rules: [
+            {
+              type   : 'empty',
+              prompt : 'Please enter your password.'
+            }
+          ]
+        }
+      }
+    });
+</script>

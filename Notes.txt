@@ -1,7 +1,7 @@
 (Y) Move readings inside the stationStore view
 (Y) Add new reading fields: wind direction, chill, compass
 (Y) Implemented create/ delete functionality for stations and readings
-==RELEASE 1== (complete)
+==RELEASE 1==
 
 
 (Y) Add position coordinates to station
@@ -39,9 +39,13 @@
 ==PATCH 1==
 
 
+(Y) Refactoring validation methods using semantic ui
+(Y) Fixed authenticate method to check for correct password
+(Y) Implemented functionality to update one user field at a time
+==PATCH 2==
+
+
 (-) Add text colours to trend for "Increasing" and "Decreasing" and icons
-(-) Allow users to update one field in Settings at a time
-(-) Implement validation of user authentication: check email against password
-(-) Implement Exception handling in fetching readings for invalid station name
 (-) Refactor and optimize chart methods
+(-) Prevent registration using the same email
 ==TO PATCH==

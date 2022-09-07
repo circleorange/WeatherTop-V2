@@ -1,6 +1,20 @@
 {
   "latestReport": [
     {
+      "name": "Cork",
+      "readings": {
+        "code": 800,
+        "tempCelsius": 14.87,
+        "tempFahrenheit": "58.77",
+        "pressure": 997,
+        "windSpeed": 4.63,
+        "windDirection": 350,
+        "windChill": 15.366485898881159,
+        "compassDirection": "INVALID_COMPASS_DIRECTION",
+        "beaufortReading": 1
+      }
+    },
+    {
       "name": "Donegal",
       "readings": {
         "code": 500,
@@ -32,13 +46,13 @@
       "name": "Galway",
       "readings": {
         "code": 800,
-        "tempCelsius": 16.12,
-        "tempFahrenheit": "61.02",
-        "pressure": 997,
-        "windSpeed": 3.73,
-        "windDirection": 87,
-        "windChill": 16.992970717708328,
-        "compassDirection": "East",
+        "tempCelsius": 13.99,
+        "tempFahrenheit": "57.18",
+        "pressure": 1000,
+        "windSpeed": 3.58,
+        "windDirection": 43,
+        "windChill": 14.673679257513303,
+        "compassDirection": "NE",
         "beaufortReading": 1
       }
     },

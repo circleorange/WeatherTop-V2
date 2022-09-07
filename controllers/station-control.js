@@ -52,24 +52,19 @@ const stationControl = {
   createReading(request, response) {
     logger.info("CREATE_READING_START");
     const stationId = request.params.id;
-    if (request.body.code == "" || request.body.tempCelsius == "" || request.body.speed == ""
-      || request.body.direction == "" || request.body.pressure == "") {
-      logger.info("CREATE_READING_CHECK_FAIL");
-    } else {
-      logger.info("CREATE_READING_CHECK_PASS");
-      const newReading = {
-        id: uuid.v1(),
-        date: getCurrentDate(),
-        code: request.body.code,
-        temperature: request.body.tempCelsius,
-        windSpeed: request.body.speed,
-        windDirection: request.body.direction,
-        pressure: request.body.pressure
-      };
-      stationCollection.createReading(stationId, newReading);
-      let stations = stationCollection.getAllStations();
-      reportCollection.createLatestReport(stations);
-    }
+    logger.info("CREATE_READING_CHECK_PASS");
+    const newReading = {
+      id: uuid.v1(),
+      date: getCurrentDate(),
+      code: request.body.code,
+      temperature: request.body.tempCelsius,
+      windSpeed: request.body.speed,
+      windDirection: request.body.direction,
+      pressure: request.body.pressure
+    };
+    stationCollection.createReading(stationId, newReading);
+    let stations = stationCollection.getAllStations();
+    reportCollection.createLatestReport(stations);
     response.redirect("/station/" + stationId);
     logger.info("CREATE_READING_FINISHED");
   },

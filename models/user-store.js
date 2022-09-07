@@ -30,6 +30,12 @@ const userStore = {
     user.email = updatedUser.email;
     user.password = updatedUser.password;
     this.store.save();
+  },
+
+  checkPassword(email, inputPassword) {
+    const user = this.getUserByEmail(email);
+    if (user.password === inputPassword) { return true; }
+    else { return false; }
   }
 };
 

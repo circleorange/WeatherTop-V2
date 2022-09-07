@@ -11,6 +11,12 @@
   <div class="ui two column centered grid">
     <div class="two column centered row">
       <div class="column">
+        {{#if authenticationFailed}}
+          <div class="ui red error message">
+            <div class="header">Login Failed</div>
+            <p>Your email or password is incorrect.<br> Please try again.</p>
+          </div>
+        {{/if}}
         <form class="ui segment form" action="/authenticate" method="POST">
           <h3 class="ui header">Login</h3>
           <div class="ui divider"></div>

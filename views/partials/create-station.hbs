@@ -1,8 +1,8 @@
 <form class="ui stacked segment form" action="/dashboard/create-station" method="POST">
   <div class="three fields">
-    <div class="field">
+    <div class="required field">
       <label>New Station</label>
-      <input placeholder="Name" type="text" name="name">
+      <input placeholder="Location" type="text" name="name">
     </div>
     <div class="field">
       <label>Latitude</label>
@@ -17,4 +17,22 @@
   <button class="ui blue submit button">
     <i class="plus icon"></i> Create Station
   </button>
+  <div class="ui error message"></div>
 </form>
+
+<script>
+  $('.ui.form')
+    .form({
+      fields: {
+        name: {
+          identifier  : 'name',
+          rules: [
+            {
+              type   : 'empty',
+              prompt : 'Please enter a valid station location.'
+            }
+          ]
+        }
+      }
+    });
+</script>

@@ -2,13 +2,11 @@
 
 const userStore = require("../models/user-store");
 const logger = require("../utils/logger");
-const uuid = require("uuid");
+const uuid = require("uuid")
 
 const accounts = {
   index(request, response) {
-    const viewData = {
-      title: "Home"
-    };
+    const viewData = { title: "Home" };
     response.render("index", viewData);
   },
 
@@ -56,27 +54,54 @@ const accounts = {
   },
 
   authenticate(request, response) {
+    logger.info("AUTHENTICATION_START");
     const user = userStore.getUserByEmail(request.body.email);
-    if (user) {
+    if (userStore.checkPassword(user.email, request.body.password)) {
+      logger.info("AUTHENTICATION_CHECK_PASS");
       response.cookie("userCookie", user.id);
       logger.info(`SIGNING_IN_AS: ${user.email}`);
       response.redirect("/dashboard");
     } else {
-      response.redirect("/sign-in");
+      const viewData = {
+        title: "Login failed",
+        authenticationFailed: true
+      };
+      response.render("sign-in", viewData);
+      logger.info("AUTHENTICATION_CHECK_FAILED");
     }
+    logger.info("AUTHENTICATION_FINISHED");
   },
 
   updateUser(request, response) {
-    logger.info("ACTION_UPDATE_MEMBER_PENDING");
+    logger.info("UPDATE_MEMBER_START");
     const loggedInUser = accounts.getCurrentUser(request);
-    const updatedUser = {
-      firstName: request.body.firstname,
-      lastName: request.body.lastname,
-      email: request.body.email,
-      password: request.body.password
+    const firstname = request.body.firstname;
+    const lastname = request.body.lastname;
+    const email = request.body.email;
+    const password = request.body.password;
+    let updatedUser = {
+      firstName: loggedInUser.firstName,
+      lastName: loggedInUser.lastName,
+      email: loggedInUser.email,
+      password: loggedInUser.password
+    };
+    if (!firstname == "" && !lastname == "" && !email == "" && !password == "") {
+      updatedUser.firstName = firstname;
+      updatedUser.lastName = lastname;
+      updatedUser.email = email;
+      updatedUser.password = password;
+    } else if (!firstname == "" && lastname == "" && email == "" && password == "") {
+      updatedUser.firstName = firstname;
+    } else if (firstname == "" && !lastname == "" && email == "" && password == "") {
+      updatedUser.lastName = lastname;
+    } else if (firstname == "" && lastname == "" && !email == "" && password == "") {
+      updatedUser.email = email;
+    } else if (firstname === "" && lastname === "" && email == "" && !password == "") {
+      updatedUser.password = password;
     }
     userStore.updateUser(loggedInUser, updatedUser);
     response.redirect("/settings");
+    logger.info("UPDATE_MEMBER_FINISHED");
   }
 };
 

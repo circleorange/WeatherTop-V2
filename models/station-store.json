@@ -200,40 +200,6 @@
       "containsReadings": true
     },
     {
-      "id": "a0f80570-2ec4-11ed-808b-b7762d067543",
-      "userId": "3ad52697-6d98-4d80-8273-084de55a86c0",
-      "name": "Galway",
-      "position": {
-        "latitude": "53.2744",
-        "longitude": "-9.0491"
-      },
-      "readings": [
-        {
-          "id": "37ae4400-2ed6-11ed-8d5b-d1beefd462a5",
-          "date": "2022-9-7 18:55:11.40",
-          "code": 800,
-          "temperature": 16.12,
-          "windSpeed": 3.73,
-          "pressure": 997,
-          "windDirection": 87
-        }
-      ],
-      "minMaxValues": {
-        "maxTemperature": null,
-        "minTemperature": null,
-        "maxWind": null,
-        "minWind": null,
-        "maxPressure": null,
-        "minPressure": null
-      },
-      "weatherTrends": {
-        "temperatureTrend": "None",
-        "windTrend": "None",
-        "pressureTrend": "None"
-      },
-      "containsReadings": false
-    },
-    {
       "id": "a8dc7660-2ecc-11ed-b3dd-ad53485d40a4",
       "userId": "3ad52697-6d98-4d80-8273-084de55a86c0",
       "name": "Limerick",
@@ -266,6 +232,83 @@
         "pressureTrend": "None"
       },
       "containsReadings": true
+    },
+    {
+      "id": "cd309770-2edc-11ed-ba81-63747477eaf1",
+      "userId": "3ad52697-6d98-4d80-8273-084de55a86c0",
+      "name": "Cork",
+      "position": {
+        "latitude": "51.8971",
+        "longitude": "-8.4655"
+      },
+      "readings": [
+        {
+          "id": "0283f650-2ee3-11ed-a857-a3e7aae4e8ad",
+          "date": "2022-9-7 20:26:45.302",
+          "code": 500,
+          "temperature": 15.87,
+          "windSpeed": 4.63,
+          "pressure": 995,
+          "windDirection": 80
+        },
+        {
+          "id": "4bd9c540-2efd-11ed-b9d0-5beb976525ad",
+          "date": "2022-9-7 23:34:55.252",
+          "code": 800,
+          "temperature": 14.87,
+          "windSpeed": 4.63,
+          "pressure": 997,
+          "windDirection": 350
+        }
+      ],
+      "minMaxValues": {
+        "maxTemperature": 15.87,
+        "minTemperature": 14.87,
+        "maxWind": 4.63,
+        "minWind": 4.63,
+        "maxPressure": 997,
+        "minPressure": 995
+      },
+      "weatherTrends": {
+        "temperatureTrend": "None",
+        "windTrend": "None",
+        "pressureTrend": "None"
+      },
+      "containsReadings": true
+    },
+    {
+      "id": "722b7e50-2efd-11ed-b9d0-5beb976525ad",
+      "userId": "3ad52697-6d98-4d80-8273-084de55a86c0",
+      "name": "Galway",
+      "position": {
+        "latitude": "53.2744",
+        "longitude": "-9.0491"
+      },
+      "readings": [
+        {
+          "id": "893a0d00-2efd-11ed-b9d0-5beb976525ad",
+          "date": "2022-9-7 23:36:38.224",
+          "code": 800,
+          "temperature": 13.99,
+          "windSpeed": 3.58,
+          "pressure": 1000,
+          "windDirection": 43
+        }
+      ],
+      "minMaxValues": {
+        "maxTemperature": null,
+        "minTemperature": null,
+        "maxWind": null,
+        "minWind": null,
+        "maxPressure": null,
+        "minPressure": null
+      },
+      "weatherTrends": {
+        "temperatureTrend": "None",
+        "windTrend": "None",
+        "pressureTrend": "None"
+      },
+      "containsReadings": false
     }
   ]
 }

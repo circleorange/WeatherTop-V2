@@ -7,6 +7,19 @@ const accounts = require("./accounts.js");
 const uuid = require("uuid");
 const axios = require("axios");
 
+function getViewData(loggedInUser) {
+    logger.info("GET_VIEW_DATA_START");
+    const userStations = stationStore.getStationsByUserId(loggedInUser.id);
+    const viewData = {
+      title: "Dashboard",
+      stations: userStations,
+      latestReadings: reportStore.createLatestReport(userStations),
+      stationSummary: stationStore.createStationSummary(userStations)
+    };
+    logger.info("GET_VIEW_DATA_FINISHED");
+    return viewData;
+}
+
 
 const dashboard = {
   index(request, response) {
@@ -25,21 +38,19 @@ const dashboard = {
 
   createStation(request, response) {
     logger.info("CREATE_STATION_START");
-    if (!request.body.name == "") {
-      logger.info("CREATE_STATION_CHECK_PASS");
-      const loggedInUser = accounts.getCurrentUser(request);
-      const newStation = {
-        id: uuid.v1(),
-        userId: loggedInUser.id,
-        name: request.body.name,
-        position: {
-          latitude: parseFloat(request.body.latitude).toFixed(4),
-          longitude: parseFloat(request.body.longitude).toFixed(4),
-        },
-        readings: [],
-      };
-      stationStore.createStation(newStation);
-    }
+    const loggedInUser = accounts.getCurrentUser(request);
+    logger.info("CREATE_STATION_CHECK_PASS");
+    const newStation = {
+      id: uuid.v1(),
+      userId: loggedInUser.id,
+      name: request.body.name,
+      position: {
+        latitude: parseFloat(request.body.latitude).toFixed(4),
+        longitude: parseFloat(request.body.longitude).toFixed(4),
+      },
+      readings: [],
+    };
+    stationStore.createStation(newStation);
     response.redirect("/dashboard");
     logger.info("CREATE_STATION_FINISHED");
   },
@@ -72,20 +83,6 @@ const dashboard = {
       logger.info("FETCH_COORDINATES_ERROR");
       response.redirect("/dashboard");
     }
-  },
-
-  getViewData(request, response) {
-    logger.info("GET_VIEW_DATA_START");
-    const loggedInUser = accounts.getCurrentUser(request);
-    const userStations = stationStore.getStationsByUserId(loggedInUser.id);
-    const viewData = {
-      title: "Dashboard",
-      stations: userStations,
-      latestReadings: reportStore.createLatestReport(userStations),
-      stationSummary: stationStore.createStationSummary(userStations)
-    };
-    logger.info("GET_VIEW_DATA_FINISHED");
-    return viewData;
   }
 };
 
