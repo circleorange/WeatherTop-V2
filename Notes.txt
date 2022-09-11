@@ -45,7 +45,10 @@
 ==PATCH 2==
 
 
-(-) Add text colours to trend for "Increasing" and "Decreasing" and icons
+(Y) Add text colours to trend for "Increasing" and "Decreasing" and icons
+==PATCH 3==
+
+
 (-) Refactor and optimize chart methods
 (-) Prevent registration using the same email
 ==TO PATCH==

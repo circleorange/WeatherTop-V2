@@ -15,23 +15,23 @@ const reportStore = {
 
     // 'for in' loops over numbers but 'for of' loops over objects
     for (let station of stations) {
-      let latestReadingOf = station["readings"][station["readings"].length - 1];
+      let lastReading = station["readings"][station["readings"].length - 1];
       let isEmpty = station["readings"].length === 0;
 
       const latestReadings = {
         name: station["name"],
         readings: {
-          code: isEmpty ? null : latestReadingOf["code"],
-          tempCelsius: isEmpty ? null : latestReadingOf["temperature"],
-          tempFahrenheit: isEmpty ? null : conversions.getFahrenheit(latestReadingOf["temperature"]),
-          pressure: isEmpty ? null : latestReadingOf["pressure"],
+          code: isEmpty ? null : lastReading["code"],
+          tempCelsius: isEmpty ? null : lastReading["temperature"],
+          tempFahrenheit: isEmpty ? null : conversions.getFahrenheit(lastReading["temperature"]),
+          pressure: isEmpty ? null : lastReading["pressure"],
 
-          windSpeed: isEmpty ? null : latestReadingOf["windSpeed"],
-          windDirection: isEmpty ? null : latestReadingOf["windDirection"],
+          windSpeed: isEmpty ? null : lastReading["windSpeed"],
+          windDirection: isEmpty ? null : lastReading["windDirection"],
 
-          windChill: isEmpty ? null : conversions.getWindChill(latestReadingOf["temperature"], latestReadingOf["windSpeed"]),
-          compassDirection: isEmpty ? null : conversions.getCompassDirection(latestReadingOf["windDirection"]),
-          beaufortReading: isEmpty ? null : conversions.getBeaufortReading(latestReadingOf["windSpeed"]),
+          windChill: isEmpty ? null : conversions.getWindChill(lastReading["temperature"], lastReading["windSpeed"]),
+          compassDirection: isEmpty ? null : conversions.getCompassDirection(lastReading["windDirection"]),
+          beaufortReading: isEmpty ? null : conversions.getBeaufortReading(lastReading["windSpeed"]),
         }
       };
 
@@ -45,7 +45,7 @@ const reportStore = {
     return this.reportStore.findAll(this.report);
   },
 
-  getOneReportByName(stationName) {
+  getReportByName(stationName) {
     return this.reportStore.findOneBy(this.report, {name: stationName});
   },
 }

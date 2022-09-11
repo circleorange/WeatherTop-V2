@@ -74,65 +74,66 @@ const stationStore = {
       let weatherTrends = {
         temperatureTrend: stationAnalytics.getTemperatureTrend(station),
         windTrend: stationAnalytics.getWindTrend(station),
-        pressureTrend: stationAnalytics.getPressureTrend(station)
+        pressureTrend: stationAnalytics.getPressureTrend(station),
       }
 
       station["minMaxValues"] = minMaxValues;
       station["weatherTrends"] = weatherTrends;
+      station.weatherIcon = stationAnalytics.weatherIcons.get(parseInt(station.readings[station.readings.length - 1].code));
+      station.tempTrendIcon = stationAnalytics.trendIcons.get(station.weatherTrends.temperatureTrend);
+      station.windTrendIcon = stationAnalytics.trendIcons.get(station.weatherTrends.windTrend);
+      station.presTrendIcon = stationAnalytics.trendIcons.get(station.weatherTrends.pressureTrend);
 
       // Boolean check if station contains readings based on code field
       if (station["readings"].length === 0) {
         station["containsReadings"] = false;
-      } else {
-        station["containsReadings"] = true;
-      }
+      } else { station["containsReadings"] = true; }
     }
     return stations;
   },
 };
 
-
 Handlebars.registerHelper("getWeatherLabel", function(name) {
-  let stationReport = reportCollection.getOneReportByName(name);
+  let stationReport = reportCollection.getReportByName(name);
   return conversions.getWeatherLabel(stationReport["readings"]["code"]);
 })
 
 Handlebars.registerHelper("getTempCelsius", function(name) {
-  let report = reportCollection.getOneReportByName(name);
+  let report = reportCollection.getReportByName(name);
   if (report["readings"]["tempCelsius"] == null) {return "";}
   else {return report["readings"]["tempCelsius"] + " C";}
 })
 
 Handlebars.registerHelper("getTempFahrenheit", function(name) {
-  let report = reportCollection.getOneReportByName(name);
+  let report = reportCollection.getReportByName(name);
   if (report["readings"]["tempFahrenheit"] == null) {return "";}
   else {return report["readings"]["tempFahrenheit"] + " F";}
 })
 
 Handlebars.registerHelper("getBeaufortReading", function(name) {
-  let report = reportCollection.getOneReportByName(name);
+  let report = reportCollection.getReportByName(name);
   if (report["readings"]["beaufortReading"] == null) {return "";}
   else {return report["readings"]["beaufortReading"] + " bft";}
 })
 
 Handlebars.registerHelper("getLatestPressure", function(name) {
-  let report = reportCollection.getOneReportByName(name);
+  let report = reportCollection.getReportByName(name);
   if (report["readings"]["pressure"] == null) {return "";}
   else {return report["readings"]["pressure"] + " hPa";}
 })
 
 Handlebars.registerHelper("getCompassDirection", function(name) {
-  let report = reportCollection.getOneReportByName(name);
+  let report = reportCollection.getReportByName(name);
   return report["readings"]["compassDirection"];
 })
 
 Handlebars.registerHelper("getBeaufortLabel", function(name) {
-  let report = reportCollection.getOneReportByName(name);
+  let report = reportCollection.getReportByName(name);
   return conversions.getBeaufortLabel(report["readings"]["beaufortReading"]);
 })
 
 Handlebars.registerHelper("getWindChill", function(name) {
-  let report = reportCollection.getOneReportByName(name);
+  let report = reportCollection.getReportByName(name);
   if (report["readings"]["windChill"] == null) {return "";}
   else {return (Math.round((report["readings"]["windChill"]) * 100) / 100) + " C";}
 })

@@ -2,7 +2,6 @@
   <div class="column">
     <div class="ui card" style="height: 100%">
       <div class="content">
-
         <h3 class="ui header">
           <i class="green map marker icon"></i>
           <div class="content">{{name}}</div>
@@ -30,7 +29,7 @@
       <div class="content">
 
         <h3 class="ui header">
-          <i class="yellow sun icon"></i>
+          <i class="{{weatherIcon}}"></i>
           <div class="content">Weather</div>
         </h3>
         <div class="ui divider"></div>
@@ -86,7 +85,7 @@
           </div>
         </div>
         <div class="ui divider"></div>
-        <div>Trend: <b>{{weatherTrends.temperatureTrend}}</b></div>
+        <div><b>{{weatherTrends.temperatureTrend}}</b><i class="{{tempTrendIcon}}"></i></div>
       </div>
     </div>
   </div>
@@ -129,7 +128,7 @@
         </div>
         <div class="ui hidden divider"></div>
         <div class="ui divider"></div>
-        <div>Trend: <b>{{weatherTrends.windTrend}}</b></div>
+        <div><b>{{weatherTrends.windTrend}}</b><i class="{{windTrendIcon}}"></i></div>
       </div>
     </div>
   </div>
@@ -162,7 +161,7 @@
         <div class="ui hidden divider"></div>
         <div class="ui hidden divider"></div>
         <div class="ui divider"></div>
-        <div>Trend: <b>{{weatherTrends.pressureTrend}}</b></div>
+        <div><b>{{weatherTrends.pressureTrend}}</b><i class="{{presTrendIcon}}"></i></div>
       </div>
     </div>
   </div>

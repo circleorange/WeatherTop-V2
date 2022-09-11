@@ -56,18 +56,19 @@
       },
       "containsReadings": true,
       "weatherTrends": {
-        "temperatureTrend": "Increasing",
-        "windTrend": "None",
-        "pressureTrend": "None"
-      }
+        "temperatureTrend": "Trend: Increasing",
+        "windTrend": "No Trend",
+        "pressureTrend": "No Trend"
+      },
+      "tempTrendIcon": "green big angle double up icon"
     },
     {
       "id": "05",
       "name": "Dunmore",
       "userId": "3ad52697-6d98-4d80-8273-084de55a86c0",
       "position": {
-        "latitude": 52.1499,
-        "longitude": -6.9833
+        "latitude": "53.6190",
+        "longitude": "-8.7423"
       },
       "readings": [
         {
@@ -117,10 +118,13 @@
       },
       "containsReadings": true,
       "weatherTrends": {
-        "temperatureTrend": "Increasing",
-        "windTrend": "None",
-        "pressureTrend": "None"
-      }
+        "temperatureTrend": "Trend: Increasing",
+        "windTrend": "No Trend",
+        "pressureTrend": "No Trend"
+      },
+      "icon": "yellow bolt icon",
+      "weatherIcon": "yellow bolt icon",
+      "tempTrendIcon": "green big angle double up icon"
     },
     {
       "id": "fbf72c50-2ebd-11ed-8337-812cbcc296fa",
@@ -150,11 +154,13 @@
         "minPressure": 1001
       },
       "weatherTrends": {
-        "temperatureTrend": "None",
-        "windTrend": "None",
-        "pressureTrend": "None"
+        "temperatureTrend": "No Trend",
+        "windTrend": "No Trend",
+        "pressureTrend": "No Trend"
       },
-      "containsReadings": true
+      "containsReadings": true,
+      "icon": "yellow bolt icon",
+      "weatherIcon": "yellow bolt icon"
     },
     {
       "id": "7613b6d0-2ec2-11ed-97c3-9f93d7d0b238",
@@ -182,22 +188,43 @@
           "windSpeed": 4.99,
           "pressure": 1000,
           "windDirection": 108
+        },
+        {
+          "id": "0c850220-310e-11ed-86fe-7b072394986b",
+          "date": "2022-9-10 14:39:52.770",
+          "code": 800,
+          "temperature": 20.03,
+          "windSpeed": 2.61,
+          "pressure": 1017,
+          "windDirection": 148
+        },
+        {
+          "id": "6b6ea8a0-3112-11ed-97b2-7972f2bbcb16",
+          "date": "2022-9-10 15:11:9.994",
+          "code": "500",
+          "temperature": "21",
+          "windSpeed": "1",
+          "windDirection": "120",
+          "pressure": "1016"
         }
       ],
       "minMaxValues": {
-        "maxTemperature": 16.03,
+        "maxTemperature": "21",
         "minTemperature": 16.03,
         "maxWind": 4.99,
-        "minWind": 4.99,
-        "maxPressure": 1000,
+        "minWind": "1",
+        "maxPressure": 1017,
         "minPressure": 1000
       },
       "weatherTrends": {
-        "temperatureTrend": "None",
-        "windTrend": "None",
-        "pressureTrend": "None"
+        "temperatureTrend": "Trend: Increasing",
+        "windTrend": "Trend: Decreasing",
+        "pressureTrend": "No Trend"
       },
-      "containsReadings": true
+      "containsReadings": true,
+      "icon": "grey cloud icon",
+      "tempTrendIcon": "green big angle double up icon",
+      "windTrendIcon": "red big angle double down icon"
     },
     {
       "id": "a8dc7660-2ecc-11ed-b3dd-ad53485d40a4",
@@ -216,22 +243,33 @@
           "windSpeed": 4.8,
           "pressure": 996,
           "windDirection": 118
+        },
+        {
+          "id": "04e5b6e0-310e-11ed-86fe-7b072394986b",
+          "date": "2022-9-10 14:39:39.982",
+          "code": 800,
+          "temperature": 18.97,
+          "windSpeed": 3.35,
+          "pressure": 1017,
+          "windDirection": 155
         }
       ],
       "minMaxValues": {
-        "maxTemperature": 15.97,
+        "maxTemperature": 18.97,
         "minTemperature": 15.97,
         "maxWind": 4.8,
-        "minWind": 4.8,
-        "maxPressure": 996,
+        "minWind": 3.35,
+        "maxPressure": 1017,
         "minPressure": 996
       },
       "weatherTrends": {
-        "temperatureTrend": "None",
-        "windTrend": "None",
-        "pressureTrend": "None"
+        "temperatureTrend": "No Trend",
+        "windTrend": "No Trend",
+        "pressureTrend": "No Trend"
       },
-      "containsReadings": true
+      "containsReadings": true,
+      "icon": "yellow bolt icon",
+      "weatherIcon": "yellow bolt icon"
     },
     {
       "id": "cd309770-2edc-11ed-ba81-63747477eaf1",
@@ -259,22 +297,42 @@
           "windSpeed": 4.63,
           "pressure": 997,
           "windDirection": 350
+        },
+        {
+          "id": "819237e0-310e-11ed-a33d-bbadbb618da7",
+          "date": "2022-9-10 14:43:9.150",
+          "code": 200,
+          "temperature": 16.87,
+          "windSpeed": 4.63,
+          "pressure": 1018,
+          "windDirection": 120
+        },
+        {
+          "id": "fd7016e0-3111-11ed-87ef-9157c5d79b3f",
+          "date": "2022-9-10 15:8:5.454",
+          "code": "400",
+          "temperature": "18",
+          "windSpeed": "5",
+          "windDirection": "150",
+          "pressure": "997"
         }
       ],
       "minMaxValues": {
-        "maxTemperature": 15.87,
+        "maxTemperature": "18",
         "minTemperature": 14.87,
-        "maxWind": 4.63,
+        "maxWind": "5",
         "minWind": 4.63,
-        "maxPressure": 997,
+        "maxPressure": 1018,
         "minPressure": 995
       },
       "weatherTrends": {
-        "temperatureTrend": "None",
-        "windTrend": "None",
-        "pressureTrend": "None"
+        "temperatureTrend": "Trend: Increasing",
+        "windTrend": "No Trend",
+        "pressureTrend": "No Trend"
       },
-      "containsReadings": true
+      "containsReadings": true,
+      "icon": "grey cloud icon",
+      "tempTrendIcon": "green big angle double up icon"
     },
     {
       "id": "722b7e50-2efd-11ed-b9d0-5beb976525ad",
@@ -293,22 +351,60 @@
           "windSpeed": 3.58,
           "pressure": 1000,
           "windDirection": 43
+        },
+        {
+          "id": "b9d8a6e0-2f86-11ed-a35b-419f0d04dd90",
+          "date": "2022-9-8 15:58:40.846",
+          "code": 800,
+          "temperature": 19.31,
+          "windSpeed": 4.05,
+          "pressure": 1004,
+          "windDirection": 12
+        },
+        {
+          "id": "f91c22e0-310d-11ed-86fe-7b072394986b",
+          "date": "2022-9-10 14:39:20.207",
+          "code": 800,
+          "temperature": 20.04,
+          "windSpeed": 2,
+          "pressure": 1017,
+          "windDirection": 152
+        },
+        {
+          "id": "8a2ef5f0-310e-11ed-a33d-bbadbb618da7",
+          "date": "2022-9-10 14:43:23.599",
+          "code": 200,
+          "temperature": 20.04,
+          "windSpeed": 2,
+          "pressure": 1017,
+          "windDirection": 152
+        },
+        {
+          "id": "928f2360-3112-11ed-97b2-7972f2bbcb16",
+          "date": "2022-9-10 15:12:15.638",
+          "code": "100",
+          "temperature": "21",
+          "windSpeed": "1",
+          "windDirection": "150",
+          "pressure": "1017"
         }
       ],
       "minMaxValues": {
-        "maxTemperature": null,
-        "minTemperature": null,
-        "maxWind": null,
-        "minWind": null,
-        "maxPressure": null,
-        "minPressure": null
+        "maxTemperature": 20.04,
+        "minTemperature": 13.99,
+        "maxWind": 4.05,
+        "minWind": 2,
+        "maxPressure": 1017,
+        "minPressure": 1000
       },
       "weatherTrends": {
-        "temperatureTrend": "None",
-        "windTrend": "None",
-        "pressureTrend": "None"
+        "temperatureTrend": "No Trend",
+        "windTrend": "No Trend",
+        "pressureTrend": "No Trend"
       },
-      "containsReadings": false
+      "containsReadings": true,
+      "icon": "grey cloud icon",
+      "weatherIcon": "grey cloud icon"
     }
   ]
 }

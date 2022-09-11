@@ -3,27 +3,27 @@
     {
       "name": "Cork",
       "readings": {
-        "code": 800,
-        "tempCelsius": 14.87,
-        "tempFahrenheit": "58.77",
-        "pressure": 997,
-        "windSpeed": 4.63,
-        "windDirection": 350,
-        "windChill": 15.366485898881159,
-        "compassDirection": "INVALID_COMPASS_DIRECTION",
+        "code": "400",
+        "tempCelsius": "18",
+        "tempFahrenheit": "64.40",
+        "pressure": "997",
+        "windSpeed": "5",
+        "windDirection": "150",
+        "windChill": 18.83074744049724,
+        "compassDirection": "SSE",
         "beaufortReading": 1
       }
     },
     {
       "name": "Donegal",
       "readings": {
-        "code": 500,
-        "tempCelsius": 16.03,
-        "tempFahrenheit": "60.85",
-        "pressure": 1000,
-        "windSpeed": 4.99,
-        "windDirection": 108,
-        "windChill": 16.597950639441557,
+        "code": "500",
+        "tempCelsius": "21",
+        "tempFahrenheit": "69.80",
+        "pressure": "1016",
+        "windSpeed": "1",
+        "windDirection": "120",
+        "windChill": 23.128000000000004,
         "compassDirection": "ESE",
         "beaufortReading": 1
       }
@@ -45,14 +45,14 @@
     {
       "name": "Galway",
       "readings": {
-        "code": 800,
-        "tempCelsius": 13.99,
-        "tempFahrenheit": "57.18",
-        "pressure": 1000,
-        "windSpeed": 3.58,
-        "windDirection": 43,
-        "windChill": 14.673679257513303,
-        "compassDirection": "NE",
+        "code": "100",
+        "tempCelsius": "21",
+        "tempFahrenheit": "69.80",
+        "pressure": "1017",
+        "windSpeed": "1",
+        "windDirection": "150",
+        "windChill": 23.128000000000004,
+        "compassDirection": "SSE",
         "beaufortReading": 1
       }
     },
@@ -60,13 +60,13 @@
       "name": "Limerick",
       "readings": {
         "code": 800,
-        "tempCelsius": 15.97,
-        "tempFahrenheit": "60.75",
-        "pressure": 996,
-        "windSpeed": 4.8,
-        "windDirection": 118,
-        "windChill": 16.570236665768245,
-        "compassDirection": "ESE",
+        "tempCelsius": 18.97,
+        "tempFahrenheit": "66.15",
+        "pressure": 1017,
+        "windSpeed": 3.35,
+        "windDirection": 155,
+        "windChill": 20.240178330658775,
+        "compassDirection": "SSE",
         "beaufortReading": 1
       }
     },

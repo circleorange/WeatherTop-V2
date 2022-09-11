@@ -68,7 +68,7 @@ const stationAnalytics = {
   },
 
   getTemperatureTrend(station) {
-    if (station.readings.length < 3) { return "None"; }
+    if (station.readings.length < 3) { return "No Trend"; }
     else {
       let trendCounter = 0;
       for (let i = 1; i < 3; i++) {
@@ -78,14 +78,14 @@ const stationAnalytics = {
         if (temp > tempPrev) { trendCounter++; }
         if (temp < tempPrev) { trendCounter--; }
       }
-      if (trendCounter == 2) { return "Increasing"; }
-      else if (trendCounter == -2) { return  "Decreasing"; }
-      else { return "None"; }
+      if (trendCounter == 2) { return "Trend: Increasing"; }
+      else if (trendCounter == -2) { return  "Trend: Decreasing"; }
+      else { return "No Trend"; }
     }
   },
 
   getWindTrend(station) {
-    if (station.readings.length < 3) { return "None"; }
+    if (station.readings.length < 3) { return "No Trend"; }
     else {
       let trendCounter = 0;
       for (let i = 1; i < 3; i++) {
@@ -95,14 +95,14 @@ const stationAnalytics = {
         if (wind > windPrev) { trendCounter++; }
         if (wind < windPrev) { trendCounter--; }
       }
-      if (trendCounter == 2) { return "Increasing"; }
-      else if (trendCounter == -2) { return  "Decreasing"; }
-      else { return "None"; }
+      if (trendCounter == 2) { return "Trend: Increasing"; }
+      else if (trendCounter == -2) { return  "Trend: Decreasing"; }
+      else { return "No Trend"; }
     }
   },
 
   getPressureTrend(station) {
-    if (station.readings.length < 3) { return "None"; }
+    if (station.readings.length < 3) { return "No Trend"; }
     else {
       let trendCounter = 0;
       for (let i = 1; i < 3; i++) {
@@ -112,12 +112,27 @@ const stationAnalytics = {
         if (pressure > pressurePrev) { trendCounter++; }
         if (pressure < pressurePrev) { trendCounter--; }
       }
-      if (trendCounter == 2) { return "Increasing"; }
-      else if (trendCounter == -2) { return  "Decreasing"; }
-      else { return "None"; }
+      if (trendCounter == 2) { return "Trend: Increasing"; }
+      else if (trendCounter == -2) { return  "Trend: Decreasing"; }
+      else { return "No Trend"; }
     }
-  }
+  },
 
+  trendIcons: new Map([
+    ['Trend: Increasing','green big angle double up icon'],
+    ['Trend: Decreasing','red big angle double down icon']
+    ]),
+
+  weatherIcons: new Map ([
+    [100,'yellow sun icon'],
+    [200,'grey cloud icon'],
+    [300,'grey cloud icon'],
+    [400,'blue shower icon'],
+    [500,'blue shower icon'],
+    [600,'blue umbrella icon'],
+    [700,'snowflake icon'],
+    [800,'yellow bolt icon'],
+  ])
 };
 
 module.exports = stationAnalytics;

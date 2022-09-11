@@ -6,14 +6,12 @@ const reportCollection = require("../models/report-store");
 const uuid = require("uuid");
 const axios = require("axios");
 
-
 function getCurrentDate() {
   const now = new Date();
   const currentDate = now.getFullYear()+'-'+(now.getMonth()+1)+'-'+now.getDate()+' '
     +now.getHours()+":"+now.getMinutes()+":"+now.getSeconds()+'.'+now.getMilliseconds();
   return currentDate;
 }
-
 
 const stationControl = {
   async index(request, response) {

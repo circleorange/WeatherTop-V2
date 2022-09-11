@@ -56,7 +56,7 @@ const conversions = {
   },
 
   getCompassDirection(degrees) {
-    if (degrees > 348.75 && degrees <= 11.25) { return "North"; }
+    if (degrees > 348.75 || degrees <= 11.25) { return "North"; }
     else if (degrees > 11.25 && degrees <= 33.75) { return "NNE"; }
     else if (degrees > 33.75 && degrees <= 56.25) { return "NE"; }
     else if (degrees > 56.25 && degrees <= 78.75) { return "ENE"; }

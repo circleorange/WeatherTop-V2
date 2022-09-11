@@ -7,20 +7,6 @@ const accounts = require("./accounts.js");
 const uuid = require("uuid");
 const axios = require("axios");
 
-function getViewData(loggedInUser) {
-    logger.info("GET_VIEW_DATA_START");
-    const userStations = stationStore.getStationsByUserId(loggedInUser.id);
-    const viewData = {
-      title: "Dashboard",
-      stations: userStations,
-      latestReadings: reportStore.createLatestReport(userStations),
-      stationSummary: stationStore.createStationSummary(userStations)
-    };
-    logger.info("GET_VIEW_DATA_FINISHED");
-    return viewData;
-}
-
-
 const dashboard = {
   index(request, response) {
     logger.info("RENDER_DASHBOARD_START");
