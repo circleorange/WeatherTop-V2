@@ -62,6 +62,7 @@ const stationStore = {
 
   createStationSummary(stations) {
     for (let station of stations) {
+      let isEmpty = station.readings.length === 0;
       let minMaxValues = {
         maxTemperature: stationAnalytics.getMaxTemp(station),
         minTemperature: stationAnalytics.getMinTemp(station),
@@ -79,7 +80,7 @@ const stationStore = {
 
       station["minMaxValues"] = minMaxValues;
       station["weatherTrends"] = weatherTrends;
-      station.weatherIcon = stationAnalytics.weatherIcons.get(parseInt(station.readings[station.readings.length - 1].code));
+      station.weatherIcon = isEmpty ? null : stationAnalytics.weatherIcons.get(parseInt(station.readings[station.readings.length - 1].code));
       station.tempTrendIcon = stationAnalytics.trendIcons.get(station.weatherTrends.temperatureTrend);
       station.windTrendIcon = stationAnalytics.trendIcons.get(station.weatherTrends.windTrend);
       station.presTrendIcon = stationAnalytics.trendIcons.get(station.weatherTrends.pressureTrend);

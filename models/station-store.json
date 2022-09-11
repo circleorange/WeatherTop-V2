@@ -60,7 +60,8 @@
         "windTrend": "No Trend",
         "pressureTrend": "No Trend"
       },
-      "tempTrendIcon": "green big angle double up icon"
+      "tempTrendIcon": "green big angle double up icon",
+      "weatherIcon": "grey cloud icon"
     },
     {
       "id": "05",
@@ -224,7 +225,8 @@
       "containsReadings": true,
       "icon": "grey cloud icon",
       "tempTrendIcon": "green big angle double up icon",
-      "windTrendIcon": "red big angle double down icon"
+      "windTrendIcon": "red big angle double down icon",
+      "weatherIcon": "blue shower icon"
     },
     {
       "id": "a8dc7660-2ecc-11ed-b3dd-ad53485d40a4",
@@ -332,7 +334,8 @@
       },
       "containsReadings": true,
       "icon": "grey cloud icon",
-      "tempTrendIcon": "green big angle double up icon"
+      "tempTrendIcon": "green big angle double up icon",
+      "weatherIcon": "blue shower icon"
     },
     {
       "id": "722b7e50-2efd-11ed-b9d0-5beb976525ad",
@@ -390,10 +393,10 @@
         }
       ],
       "minMaxValues": {
-        "maxTemperature": 20.04,
+        "maxTemperature": "21",
         "minTemperature": 13.99,
         "maxWind": 4.05,
-        "minWind": 2,
+        "minWind": "1",
         "maxPressure": 1017,
         "minPressure": 1000
       },
@@ -404,7 +407,7 @@
       },
       "containsReadings": true,
       "icon": "grey cloud icon",
-      "weatherIcon": "grey cloud icon"
+      "weatherIcon": "yellow sun icon"
     }
   ]
 }
